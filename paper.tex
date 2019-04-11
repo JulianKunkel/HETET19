@@ -12,10 +12,12 @@
 \pagenumbering{gobble}
 
 \usepackage{cleveref}
-
+\usepackage{todonotes}
 \usepackage{graphicx}
 \graphicspath{{./fig/}}
 \DeclareGraphicsExtensions{.png,.pdf,.jpg,.jpeg}
+
+\newcommand{\jk}[1]{\todo[inline]{TODO: #1}}
 
 \begin{document}
 \title{Looking Back: One Year HPC Certification Forum}
@@ -119,11 +121,9 @@ This content typically covers a small part of basic HPC skills which are necessa
 Moreover, they do not attest the users to have a certain competence.
 Certificates are widely used in industry to attest certain knowledge but, so far, there is no similar approach for HPC training.
 
-This lightning talk describes the current status of the certification program and the effort to create an independent body that curate the competences and issue certificates for the users.
+This article describes the current status of the certification program by looking back for the one year of this independent body that curate the competences and aims to issue certificates for the users.
 
-The foundation for this work was laid with the Performance Conscious HPC (PeCoH) project, which among other goals, aims to establish an HPC certification program.
-A white paper about the approach containing technical details is provided in \cite{whitepaper}.
-Within the project it become quickly apparent that the local effort is useful for the wider HPC community and could be extended to a global effort.
+Our previous work described the evolution from the bootstraping project towards the independent body of the HPC Certification forum \cite{TAHCPKHHSS19}.
 
 
 \begin{figure*}[tb!]
@@ -135,6 +135,7 @@ Within the project it become quickly apparent that the local effort is useful fo
 \end{figure*}
 
 \section{Related Work}
+\jk{Please everyone!}
 
 Relevant work can be classified into approaches to establish a curriculum or the creation of teaching material.
 In academia, individual universities offer their own curriculum around scientific computing and HPC, covering theoretical aspects like the software development of numerical applications.
@@ -176,7 +177,7 @@ In respect to the granularity, we expect the basic level of a leaf like “Bash 
 The tree serves the purpose of navigating across the skills, and at the same time a parent node defines the scope of its children.
 For example, the \textit{USE} competence provides means of using the HPC environment to perform various tasks, such as running parallel applications, using core services of the operating system.
 While the tree structure has been chosen as a graphical representation, some competences are cross-referenced, particularly in the skills of the USE branch.
-The tree is managed in an XML file and we offer tools to visualize the skills as mindmap or embed them into a webpage -- more information are found in \cite{whitepaper}.
+The tree is managed in an XML file and we offer tools to visualize the skills as mindmap or embed them into a webpage.
 
 \subsection{Certificates}
 
