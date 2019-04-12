@@ -147,7 +147,12 @@ The root level of our current skill tree is shown in \Cref{skill-tree}.
 The idea is that the skills from the root level provide an indication about their scope,
 e.g., are they core knowledge, dealing with the usage of HPC environments, or about programming.
 This should allow the user to rapidly drill into the skill representation.
-On the leaf level, a skill is fine-grained -- we scope the level of detail here to be able to be taught in a 1.5 hour lecture up to a 4 hour workshop.
+The closer a skill is to the root, the more abstract it is defined, while leaf nodes cover the knowledge for the specific skill.
+
+
+Within a single skill, there can also be multiple levels (basic, intermediate, expert level) building upon each other -- thus, we expect that practitioners acquire the lower levels before progressing to more complex levels.
+The basic level should cover the most relevant aspect of the skill, i.e., needed by anyone that uses the skill, the intermediate level (used for common exceptional cases) and expert levels (used in special circumstances)  are needed only for a subset of users.
+Typically, an institution has only few experts (if one at all).
 
 As the tree serves the purpose to organize the skills, there can also be references from one branch to a skill in another.
 This import allows to reuse the definitions of the skills while still allowing users to navigate the tree according to the semantics.
@@ -164,21 +169,72 @@ This import allows to reuse the definitions of the skills while still allowing u
 Each skill on the tree and even the inner nodes are described in more detail as follows:
 
 \begin{itemize}
-  \item \textbf{ID}: ID according the organization in the skill tree.
-  \item \textbf{Name}: A speaking name for a skill.
-  \item \textbf{Background}: Provides brief information motivating the need for the skill and how this skill fits into the skill map; what is the bigger picture.
-  \item \textbf{Aims}:
-  \jk{TODO}
-  Programme or module aims serve as broad purposes or goals and are generally a statement of the intentions of the teacher or school when designing or running the course. They are not intended to be statements of what students will learn or do, but rather over-arching intentions of the course. At a basic level, aims are trying to answer two questions: What is the purpose of this programme or module? What is the programme or module trying to achieve? reference
-  \item \textbf{Learning outcomes}: Defines briefly what what practitioners know / will learn. The objected are statements what prospect learners are able to do, they should
-  describe or define an action be clearly stated be measurable/quantifiable to some extent, for example, by using action words.
+  \item \textbf{ID}: ID according the organization in the skill tree. The last character indicates the level of the skill (Basic, Intermediate, or Advanced).
+  \item \textbf{Name}: A speaking name for the skill.
+  \item \textbf{Background}: Provides brief information motivating the need for the skill and how this skill fits into the skill tree; what is the bigger picture.
+  \item \textbf{Aims}\footnote{The definition of aims and outcomes follows literature for higher education \cite{williamson2011good} and \url{https://www.heacademy.ac.uk/system/files/assessment-learning-outcomes.pdf}.}: They serve as broad purposes and are generally a statement of the intentions of the skill.
+  They are not the statements of what a practitioner will learn or do.
+  At a basic level, aims are trying to answer two questions: What is the purpose of this skill?
+  What is the skill trying to achieve?
+  \item \textbf{Learning outcomes (LOs)}: Defines briefly what what practitioners will know and learn.
+  The objected are statements what prospect learners are able to do, they should
+  describe or define an action be clearly stated be measurable/quantifiable to some extent by using action words.
 \end{itemize}
 
-The closer a skill is to the root, the more abstract it is defined, while leaf nodes cover the knowledge for the specific skill.
+On the leaf level, a skill is fine-grained and orthogonal to other skills -- we scope the level of detail here to be able to be taught in a 1.5 hour lecture up to a 4 hour workshop.
+We believe this is a good granularity as it allows practitioners to cherry-pick the relevant skills and lecturers and examiners to prepare small lectures with well-defined content.
+For technology-dependent skills on leaf level (e.g., a specific file system or workload manager), often introductory skills are provided that provide the foundation to many specialized skills each representing a specific hardware or software technology.
 
-\subsection{Skill Example}
+The aggregation within the tree is similar to the aggregation found in education as part of “individual teaching events”, “those specified for modules or short courses”, and “those specified for whole degree programmes” \cite{hussey2008learning}.
+While that Hussey et al. conclude that LOs on the coarse grained level are not useful for high-level education, we use a similar concept, but relax the granularity/abstraction level of the learning outcome.
 
-The following skill describes a leaf-node for SLURM, note that it is expected to complement a generic skill that describes how the general workload management works in HPC.
+\subsection{Skill Examples}
+
+Next, we present a generic skill that describes an inner-node in more details.
+There is no actual delivery as a module or teaching event to deliver the content, it serves the purpose to inform the practitioner about the importance of the skill.
+
+\begin{itemize}
+  \item \textbf{ID}: USE4.2-B
+  \item \textbf{Name}: Executing parallel applications
+  \item \textbf{Background}:
+  Parallel computers are operated differently than a normal PC, all users must share the system. Therefore, various operative procedures are in place. Users must understand these concepts and procedures to be able to use the available resources of a system to run a parallel application. Moreover, individual solutions can often be found in a specific system.
+  \item \textbf{Aim}: To enable practitioners to comprehend the concepts and procedures for running parallel applications in HPC environments.
+  To use the system to run and monitor the execution of parallel applications on the HPC system.
+
+  \item \textbf{Learning outcomes}:
+    \begin{itemize}
+    \item explain the concepts and procedures for resource allocation and job execution in an HPC environment
+    \item run interactive jobs and batch jobs
+    \item comprehend and describe the expected behavior of job scripts
+    \item change provided job scripts and embed them into shell scripts to run a variety of parallel applications
+    \item analyze the output generated from a job scheduler and describe the cause of typically generated errors
+    \end{itemize}
+\end{itemize}
+
+The next leaf-level skill describes how workload management works in general in HPC regardless of the specific software that implements such concepts.
+It is intended that the aim and outcomes from the parent skill above are covered to some extend and refined into specifics.
+
+
+\begin{itemize}
+  \item \textbf{ID}: USE4.2.1-B
+  \item \textbf{Name}: Workload manager introduction
+  \item \textbf{Background}: There is a wide range of different workload managers in use. This skill covers generic and widely used concepts.
+  \item \textbf{Aim}: To enable practitioners to comprehend and describe the basic architecture and concepts of resource allocation for an HPC system.
+  \item \textbf{Learning outcomes}:
+
+  \begin{itemize}
+  \item comprehend the exclusive and shared usage model in HPC
+  \item differentiate batch and interactive job submission
+  \item comprehend the generic concepts and architecture of resource manager, scheduler, job and job script
+  \item explain the role of environment variables as a means to communicate
+  \item comprehend accounting principles
+  \item explain the generic steps to run and monitor a single job
+  \end{itemize}
+\end{itemize}
+
+
+The following skill describes a leaf-level skill for the usage of SLURM in the basic level.
+While there is no formal dependency to the introduction (skill USE4.2.2-B), it is expected that practitioners have obtained the other skill before learning this one.
 
 \begin{itemize}
   \item \textbf{ID}: USE4.2.2-B
@@ -186,8 +242,8 @@ The following skill describes a leaf-node for SLURM, note that it is expected to
   \item \textbf{Background}: SLURM is a widely used open-source workload manager providing various advanced features.
   \item \textbf{Aims}:
   \begin{itemize}
+    \item To enable practitioners to use relevant tools to run and monitor parallel applications using SLURM.
     \item To enable practitioners to comprehend and describe the basic architecture of SLURM and the suite of tools.
-    \item To use relevant tools to run and monitor (parallel) applications
   \end{itemize}
   \item \textbf{Learning outcomes}:
   \begin{itemize}
@@ -203,10 +259,11 @@ The following skill describes a leaf-node for SLURM, note that it is expected to
   \end{itemize}
 \end{itemize}
 
-
-
+As you can see from the definition of the skill, these learning outcomes are focusing on the core needs to actually use SLURM effectively.
+An intermediate skill could, e.g., add reservations.
 
 %\begin{itemize}
+%  \item \textbf{ID}:
 %  \item \textbf{Name}:
 %  \item \textbf{Background}:
 %  \item \textbf{Aim}:
@@ -219,6 +276,8 @@ The following skill describes a leaf-node for SLURM, note that it is expected to
 \subsection{Certificates}
 
 \subsection{Examination Process}
+
+A benefit of the fine-grained definition of learning outcomes is
 
 \section{Ecosystem}
 
