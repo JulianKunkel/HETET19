@@ -275,9 +275,61 @@ An intermediate skill could, e.g., add reservations.
 
 \section{Certification}
 
-The certification
+A certificate shall attest a user the expertise in the covered skills.
+Ensuring the integrity of a certificate is an important aspect, i.e., we must check that the learning outcomes of the covered skills are achieved and prevent self-cheating or dishonesty.
 
+Students can always cheat an examination -- the risk depends on the type of exam and methods used for the assessment.
+As we want to enable a cost-effective assessment (free for the practitioner), we chose an online examination.
+This increases the opportunity for cheating \cite{rowe2004cheating} but we deploy several  strategies that aim to minimize the risk of self-cheating as raising awareness, a question pool, and delay.
+Since knowledge can age, the month and year an examination took place is also indicated.
+As certificates bundle multiple skills together as examination of a single fine-grained leaf-level skill would be too easy for short-term memorization and prone to self-cheating.
+We believe the incentive to deliberately fake the assessment, e.g., by having the exam filled by someone else, and thus, being awarded a certificate is low.
+Therefore, we address this only in a lightweight fashion.
 
+We discuss the prototypical process that we implemented for the examination in the following.
+
+\subsection{Examination Process}
+
+The examination can be started by users any time but upon submission a delay is employed.
+Firstly, a user has to register for the examination using name and email address and optional affiliation.
+On the webpage, the process is explained, together with privacy policies.
+Further, a paragraph provides the integrity policy defining cheating and encouraging honesty.
+Practitioners are asked to opt-in the policy statement.
+With the registration, we generate an encrypted token on the server that is returned to the user by email.
+At this stage, we do not store any information about the user on the server.
+
+The email contains a link that will start the examination.
+The user chooses to start the examination by clicking on the link; then the information about the user and the time of starting the examination is stored in a temporary database.
+
+The summative assessment itself is conducting using multiple choice questions.
+Therefore, for each skill, we will be developing a pool of questions but also allow contribution of questions.
+A question has more possible answers (e.g., 10) -- the practitioner has to select if each  statement is true or false.
+An examination consists of randomly selected questions and five answers per question are selected.
+
+Once the user submits the exam results, all selected answers are stored on the server for validation -- which is done manually at the moment.
+If the user meets the criteria to pass (typically 70\% correct selection), a certificate is issued and send to the user by email.
+We then delete all personal information about the user from the server but preserve the affiliation and the raw responses.
+The affiliation is used for promotion purposes while the raw responses will be analyzed to optimize the questions.
+For example, when we identify that most users make a particular mistake, this may be an indication that the question or answer is ambivalent and needs to be improved.
+
+If the user didn't meet the criteria to pass, we will inform him about the rough score obtained.
+The user can retry to obtain the certificate after a cooldown period (typically one week) but not immediately to prevent success via brute force methods.
+To enforce this, we keep the information about the date the exam was conducted linked to his name and email.
+
+As the sole purpose of the multiple choice questions is the examination, we will not reveal which questions are answered correctly.
+We assume that high quality training material for individual skills will offer multiple choice questions that serve the purpose of feedback which promotes learning  \cite{epstein2002immediate}.
+
+\subsection{Certificates}
+
+Upon successful assessment, a certificate is awarded, it consists of two parts:
+A PDF with the key information needed for a meaningful certificate (for a draft, see \Cref{fig:awardedCertificate}).
+The name and identifier for the certificate is found in the center and below (here 4711 and “the basic certificate”).
+
+Secondly, a text file is given to the user that provides the same information.
+It is PGP signed using the private key of the HPC Certification Forum to allow verification with the published public key.
+It also contains a verification URL that can be given to a third-party allowing verification of the information.
+
+The file looks as follows:
 \begin{verbatim}
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA512
@@ -291,10 +343,6 @@ Verification URL: https://hpc-certification.org/[...]
 -----END PGP SIGNATURE-----
 \end{verbatim}
 
-
-\Cref{fig:awardedCertificate}
-
-
 \begin{figure}
   \includegraphics[width=0.48\textwidth]{JulianMKunkel}
   \caption{Draft for an awarded certificate}
@@ -302,15 +350,9 @@ Verification URL: https://hpc-certification.org/[...]
 \end{figure}
 
 
-\subsection{Certificates}
-
-\subsection{Examination Process}
-
-A benefit of the fine-grained definition of learning outcomes is
-
 \section{Ecosystem}
 
-\section{Training Delivery}
+\subsection{Training Delivery}
 
 The HPC Certification Forum is not developing training material directly or competing with providers of training material.
 However, we support individuals and institutions by endorsing and promoting their training materials and courses in two ways.
