@@ -147,16 +147,38 @@ Full members must actively contribute to the program to some extent and have vot
 The steering board directs the overall activities and is organized in different responsibilities, i.e., into topic-specific chairs.
 
 
-\section{Status of the Activities}
+\section{Overview of the Activities}
 \label{sec:status}
 
-\begin{itemize}
-  \item Technical representation of skills as Markdown and editable on a Wiki
-  \item A prototype process for the certification addressing privacy issues
-  \item Tools to generate and conduct an online multiple-choice examination
-  \item 
-\end{itemize}
+During the first year of the existence of the HPCCF, the discussion within the forum and with partners has lead to the establishment of various processes and prototypes for technical tools that are described in the following briefly.
+Further details of the overview are provided in subsequent sections.
 
+\paragraph{Management}
+At ISC-HPC 2018, the first steering board had been elected.
+We established communication channels via webpage, email and Slack for regular discussion.
+Slack is also used to conduct our monthly open meetings between members and the steering board.
+At beginning we used video conferencing tools, but found that the chat provides a more inclusive discussion and the asynchronous nature is more productive.
+We also established relations with various stackholders involved in HPC education growing the participation in the forum.
+Meeting notes with action items are extracted from Slack and documented using Google Doc.
+
+Note that until now contributions of members are voluntarily and follow the schedule as agreed between the contributor and the HPCCF board.
+We manage the prospect contributions in a Trello board; each member can manage its own card.
+
+\paragraph{Technical}
+According to our goals, we address 1) the definition of competences; 2) the creation of certificates; 3) the examination of practitioners; and 4) an ecosystem of tools supporting them.
+
+For all these sub-goals we made substantial progress.
+While the definition and organization of competences was the main focus, we prototyped various tools and processes that embed the competences into the wider education ecosystem.
+
+Firstly, we finalized the templates for the description of a competence considering pedagogic literature from higher education.
+We are still working on mapping out all relevant competences, but included also new topics that will be covered in the first version of the certification program.
+
+The definition of the competences covered by the program is version controlled with Git.
+The competences are available in XML and Markdown format.
+A Wiki allows to edit the competences and simplifies access for non-technical users.
+A navigable JavaScript representation of the skill tree is available that can be customized for the HPCCF but also for end-users.
+
+Prototypical processes and tools have been developed and deployed for curation of the examination questions and for conducting an online multiple-choice examination.
 
 \section{Skills}
 \label{sec:skills}
@@ -171,9 +193,8 @@ The basic level should cover the most relevant aspect of the skill, i.e., needed
 Typically, an institution has only few experts (if one at all).
 
 The skills are organized in a tree that serves the purpose to organize and structure the skills from a coarse-grained to a fine-grained representation allowing users to browse the skill based on the semantics.
-The root level of our current skill tree is shown in \Cref{skill-tree}.
-The idea is that the skills from the root level provide an indication about their scope,
-e.g., are they core knowledge, dealing with the usage of HPC environments, or about programming.
+The root level of our current skill tree is shown in \Cref{fig:skill-tree}; we aim to finalize the tree this year.
+The basic idea is that the skills from the root level enable navigation by providing an indication about their scope, e.g., are they core knowledge, dealing with the usage of HPC environments, or about programming.
 This should allow the user to rapidly drill into the skill representation.
 The closer a skill is to the root, the more abstract it is defined, while leaf nodes cover the knowledge for the specific skill.
 
@@ -184,8 +205,8 @@ This import allows to reuse the definitions of the skills while still allowing u
 \begin{figure*}[tb!]
 	\centering
 	\includegraphics[width=15.0cm]{skill-tree}
-	\caption{Top Level Competences with an expansion of PE4}
-	\label{f_top_level_competences}
+	\caption{Skill tree top level competences with an expansion of PE4}
+	\label{fig:skill-tree}
 \end{figure*}
 
 \subsection{Description of a skill}
@@ -309,7 +330,11 @@ As certificates bundle multiple skills together as examination of a single fine-
 We believe the incentive to deliberately fake the assessment, e.g., by having the exam filled by someone else, and thus, being awarded a certificate is low.
 Therefore, we address this only in a lightweight fashion.
 
-We discuss the prototypical process that we implemented for the examination in the following.
+A process has also been created for prospect contributors of examination questions.
+The questions are the only proprietary component for the HPCCF using restrictive license terms for authors while we give credit to them.
+We considered this necessary to minimize the establishment of solution databases; we omit further details here.
+
+We discuss the prototypical process that we implemented for conducting examination in the following.
 
 \subsection{Examination Process}
 
@@ -406,9 +431,12 @@ Ultimately, the resulting training material will complement each other leading t
 \end{figure}
 
 
-\subsection{Supportive Tools}
-
-
+\subsection{Navigation}
+%\paragraph{Navigation}
+Thanks to the contributions of the PeCoH project, a JavaScript prototype enables the embedding of a navigable skill tree into a webpage.
+The script can be used by different stackholders to present their own view on the skill-tree.
+By view we mean the selection and organization of the skills, and the additional information provided when navigating the tree.
+For instance, you could have a tree for a specific scientific domain, for a specific data center, or even for the role of the tester of a specific application; it could indicate which skills are mandatory or beneficial for these use cases, providing links to training material or adding further supplementary information.
 
 
 \section{Related Work}
@@ -466,7 +494,9 @@ Finally, the certificates recognized by the whole HPC community simplify inter-c
 
 \begin{acks}
 \small
-This work was supported by the German Research Foundation (DFG) under grants LU 1353/12-1, OL 241/2-1, and RI 1068/7-1.
+We are thankful for the contributions and discussions with the members of the HPCCF and for the contributions made by the PeCoH project.
+\jk{TODO}
+PeCoH was supported by the German Research Foundation (DFG) under grants LU 1353/12-1, OL 241/2-1, and RI 1068/7-1.
 \end{acks}
 
 \bibliographystyle{ACM-Reference-Format}
