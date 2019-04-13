@@ -89,8 +89,7 @@
   Challenges for HPC centres are to identify and overcome the gaps in users’ knowledge, while users struggle to identify relevant skills.
 
   With the HPC Certification Forum we aim to clearly categorize, define, and examine competences which brings benefit to all stakeholders involved in training.
-  In this paper, we report the status and progress this independent body has made during the first year of its existence.
-  Particularly, in various directions drafts of processes and prototypes have been generated to create a holistic ecosystem that will mature over this year.
+  In this article, we report the status and progress this independent body has made during the first year of its existence: processes and prototypes have been drafted that will  mature to a holistic ecosystem beneficial for all stackholders in HPC education.
 \end{abstract}
 
 %
@@ -112,49 +111,72 @@
 There is a generally accepted set of skills and competencies necessary to efficiently use HPC resources.
 This skill set depends on the role and domain of the practitioner but also on the available infrastructure of the center providing the computing resources.
 For example, a scientist needing to run an application on a specific machine may need basic skills in Linux, MPI, environment modules, and knowledge about the batch scheduler, e.g., SLURM.
-Understanding SLURM is a good example of a very fine-grained skill, indeed we can identify "resource management" as a generic skill that illustrates concepts across the rich variety of available resource managers.
+Understanding SLURM is a good example of a very fine-grained skill, indeed we can identify “resource management” as a generic skill that illustrates concepts across the rich variety of available resource managers.
 Institutions which operate HPC systems typically offer regularly teaching events about general aspects of their supercomputer's hard- and software architecture and about the software environment around parallel programming and optimization.
 The learning material provided by an HPC center, however, is geared to the special demands of the institutions they support and its specific HPC environment.
 This content typically covers a small part of basic HPC skills which are necessary to use other HPC systems.
 Moreover, they do not attest the users to have a certain competence.
 Certificates are widely used in industry to attest certain knowledge but, so far, there is no similar approach for HPC training.
 
-This article describes the current status of the certification program offered by the HPC Certification Forum by looking back for the one year of this independent body that curate the competences and aims to issue certificates for the users.
-Our previous work described the evolution from the project that sparked the initial activity that lead to the independent body of the HPC Certification Forum \cite{TAHCPKHHSS19}.
+This article describes the current status of the certification program offered by the HPC Certification Forum.
+Our previous work provided a brief overview of the evolution from the project that sparked  the HPC Certification Forum \cite{TAHCPKHHSS19} while this article provides details highlighting mechanisms and design decisions.
 
+The article is structured as follows:
+First, we introduce the HPC Certification Forum and the program in \Cref{sec:forum}.
+Then, an overview of the status is given in \Cref{sec:status}.
+Next, the organization of competences is discussed in \Cref{sec:skills}.
+This leads to the prototypical approach for the certification process in \Cref{sec:certification}.
+Related work is presented in \Cref{sec:related}.
+Finally, the article is concluded in \Cref{sec:conclusion}.
 
 \section{The HPC Certification Forum}
+\label{sec:forum}
 
-The HPC Certification Forum (HPCCF) has the role of a (virtual) central authority to curate and maintain a skill tree of competences, the creation of certificates, and examination of practitioners to attest certificates.
+The HPC Certification Forum (HPCCF) has the role of a (virtual) central authority to curate and maintain a certification program.
+The program consists of the definition of competences, the creation of certificates, and the examination of practitioners to attest that they possess certain competences.
 Moreover, the forum supports tools and an ecosystem around the competences.
 
-HPC Certification Program
+The HPCCF aims to support existing activities and complements them by providing a unified and clear way of mapping out the relevant HPC competences for practitioners.
+Thus, the HPCCF does not regulate the content of training material; we purposely separate the definition of skills and certificates with their examinations from content delivery.
+Similarly, the program does not prescribe a curriculum or any fixed order by which skills need to be obtained.
 
-\jk{Integrate}
-
-1) the definition and organization of fine-grained competences (skills);
-2) the establishment of certificates and (online) exams that confirm that users possess a certain skill.
-Note that the certification program does not regulate the content -- the definition of skills and certificates is separated from content creation.
-This allows the re-use of existing content but also allows to create a new ecosystem in which HPC centers or commercial companies could offer the best teaching material.
-Teaching material should be marked to indicated which skills it covers.
-In the future, the program may provide means to register and reference existing content of third-parties allowing users to browse the skills and navigate to teaching material.
-We assume that the collaboration of scientific institutions will complement each other in producing a rich variety of content for the different learning styles.
+The forum is organized using a Webpage\footnote{http://hpc-certification.org} and utilizes Slack for communication and monthly meetings.
+Members are organized in different roles:
+Anyone can become an associate member in the HPCCF free of charge -- e.g., observing the status, being listed on the webpage.
+Full members must actively contribute to the program to some extent and have voting rights for the roles of the steering board.
+The steering board directs the overall activities and is organized in different responsibilities, i.e., into topic-specific chairs.
 
 
+\section{Status of the Activities}
+\label{sec:status}
 
-\section{Skill Organization}
+\begin{itemize}
+  \item Technical representation of skills as Markdown and editable on a Wiki
+  \item A prototype process for the certification addressing privacy issues
+  \item Tools to generate and conduct an online multiple-choice examination
+  \item 
+\end{itemize}
 
-The competences are organized in a tree that serves the purpose to organize and structure the skills from a coarse-grained to a fine-grained representation allowing users to browse the skill based on the semantics.
+
+\section{Skills}
+\label{sec:skills}
+
+A skill is defined as a set of competences (learning outcomes) and some metadata.
+This model can be compared to the classification of school knowledge, for example, the skill with the short name “addition” could describe the math skill of being able to add numbers successfully.
+Within a single skill, there can also be multiple levels (basic, intermediate, expert level) building upon each other that distinguish the expertise further.
+We expect that practitioners acquire the lower levels before progressing to more complex levels.
+In our addition example, \textit{basic level}, for example, may mean to be able to add two positive numbers while the \textit{expert level} of that skill could indicate to be able to add multiple numbers.
+
+The basic level should cover the most relevant aspect of the skill, i.e., needed by anyone that uses the skill, the intermediate level (used for common exceptional cases) and expert levels (used in special circumstances)  are needed only for a subset of users.
+Typically, an institution has only few experts (if one at all).
+
+The skills are organized in a tree that serves the purpose to organize and structure the skills from a coarse-grained to a fine-grained representation allowing users to browse the skill based on the semantics.
 The root level of our current skill tree is shown in \Cref{skill-tree}.
 The idea is that the skills from the root level provide an indication about their scope,
 e.g., are they core knowledge, dealing with the usage of HPC environments, or about programming.
 This should allow the user to rapidly drill into the skill representation.
 The closer a skill is to the root, the more abstract it is defined, while leaf nodes cover the knowledge for the specific skill.
 
-
-Within a single skill, there can also be multiple levels (basic, intermediate, expert level) building upon each other -- thus, we expect that practitioners acquire the lower levels before progressing to more complex levels.
-The basic level should cover the most relevant aspect of the skill, i.e., needed by anyone that uses the skill, the intermediate level (used for common exceptional cases) and expert levels (used in special circumstances)  are needed only for a subset of users.
-Typically, an institution has only few experts (if one at all).
 
 As the tree serves the purpose to organize the skills, there can also be references from one branch to a skill in another.
 This import allows to reuse the definitions of the skills while still allowing users to navigate the tree according to the semantics.
@@ -274,6 +296,7 @@ An intermediate skill could, e.g., add reservations.
 
 
 \section{Certification}
+\label{sec:certification}
 
 A certificate shall attest a user the expertise in the covered skills.
 Ensuring the integrity of a certificate is an important aspect, i.e., we must check that the learning outcomes of the covered skills are achieved and prevent self-cheating or dishonesty.
@@ -351,6 +374,9 @@ Verification URL: https://hpc-certification.org/[...]
 
 
 \section{Ecosystem}
+\label{sec:ecosystem}
+
+We encourage the development of an ecosystem around the HPC classification, we are supporting training and tool development.
 
 \subsection{Training Delivery}
 
@@ -370,8 +396,8 @@ By using JavaScript and dynamic webpage we will provide various views on the ski
 Note that we are not intending to verify the correct usage of the skill explicitly.
 However, in case the training material or course doesn't deliver the expected material practitioners may complain and we will remove the training material from our webpage.
 
-We expect that this strategy will lead to the availability of good free training material for most skills
-while companies and individuals can still charge for effective training courses.
+We expect that this strategy will lead to the availability of good free training material for most skills while companies and individuals can still charge for effective training courses.
+Ultimately, the resulting training material will complement each other leading to a rich variety of content suitable for each individual practitioner, e.g., addressing different learning styles and languages.
 
 \begin{figure}
   \includegraphics[width=0.3\textwidth]{certified}
@@ -382,15 +408,13 @@ while companies and individuals can still charge for effective training courses.
 
 \subsection{Supportive Tools}
 
-\section{Discussion of the Benefits}
 
-Making clear what skills are required of or recommended for a competent HPC user would benefit both the HPC service providers and practitioners.
-Moreover, it would allow centres to bundle together skills that are most beneficial for specific user roles and scientific domains.
-From the perspective of content providers, existing training material can be mapped to competences allowing users to quickly identify and learn the skills they require.
-Finally, the certificates recognized by the whole HPC community simplify inter-comparison of independently offered courses and provide additional incentive for participation.
 
 
 \section{Related Work}
+
+\label{sec:related}
+
 \jk{Please everyone!}
 
 Relevant work can be classified into approaches to establish a curriculum or the creation of teaching material.
@@ -404,37 +428,36 @@ The virtual organization XSEDE\footnote{\url{https://portal.xsede.org/web/xup/tr
 The user can navigate the topics and receive further information.
 
 \section{Conclusion}
+\label{sec:conclusion}
 
 
+This allows the re-use of existing content but also allows to create a new ecosystem in which HPC centers or commercial companies could offer the best teaching material.
+Teaching material should be marked to indicated which skills it covers.
+In the future, the program may provide means to register and reference existing content of third-parties allowing users to browse the skills and navigate to teaching material.
 
 
+\subsection{Benefits}
 
+HPC practitioners
+Increase motivation to participate
+(Certificates are recognized in CV)
+Validate knowledge via tests
+Browse of relevant competences
+Identify recommended and required skills
+Compare teaching offers across sites
+Data centers
 
-\jk{Old stuff}
+Increase sharing of teaching materials
+Documentation of taught skills simplified
+Identify missing teaching activities
+Tailor skill-tree specifically to users
+Correlate lack of skills with efficient us
 
+Making clear what skills are required of or recommended for a competent HPC user would benefit both the HPC service providers and practitioners.
+Moreover, it would allow centres to bundle together skills that are most beneficial for specific user roles and scientific domains.
+From the perspective of content providers, existing training material can be mapped to competences allowing users to quickly identify and learn the skills they require.
+Finally, the certificates recognized by the whole HPC community simplify inter-comparison of independently offered courses and provide additional incentive for participation.
 
-\subsection{Skills}
-
-The skills represent competences in a fine-grained fashion.
-A skill is defined by a unique key, short name, background, level, and a description of what it encompasses.
-This model can be compared to the classification of school knowledge, for example, the skill with the short name "addition" could describe the math skill of being able to add numbers successfully.
-The level serves the purpose of distinguishing the expertise further, a \textit{basic level}, for example, may mean to be able to add two numbers between 1-20 while the \textit{expert level} of that skill could indicate to be able to add any numbers.
-
-The individual skills are organized into a tree that shows generic competences close to the root and refined skills on the leafs.
-The two top-levels of the skill tree are shown in \Cref{f_top_level_competences}; we have identified more than 35 skills.
-In respect to the granularity, we expect the basic level of a leaf like “Bash programming” can be acquired by novel users in a workshop day.
-The tree serves the purpose of navigating across the skills, and at the same time a parent node defines the scope of its children.
-For example, the \textit{USE} competence provides means of using the HPC environment to perform various tasks, such as running parallel applications, using core services of the operating system.
-While the tree structure has been chosen as a graphical representation, some competences are cross-referenced, particularly in the skills of the USE branch.
-The tree is managed in an XML file and we offer tools to visualize the skills as mindmap or embed them into a webpage.
-
-\subsection{Certificates}
-
-Certifying users with a certain competency is a core element of the program.
-Since we identified so many skills, it is not useful to perform an exam on a single competence like “SLURM”.
-Therefore, initially, we aim to group sets of skills into certificates and establish an online examination that attests users that they mastered a certain skill.
-To be meaningful these tests must prevent cheating to some extent.
-However, as any examination can be cheated with sufficient effort, we focus on practical aspects like a huge corpus of questions and some instantiated questions like \textit{how would you start ProgramX with 4 MPI processes?}
 
 
 
