@@ -18,6 +18,7 @@
 \DeclareGraphicsExtensions{.png,.pdf,.jpg,.jpeg}
 
 \newcommand{\jk}[1]{\todo[inline]{TODO: #1}}
+\newcommand{\ag}[1]{\todo[inline]{IDEA: #1}}
 
 \begin{document}
 \title{One Year HPC Certification Forum in Retrospective}
@@ -126,6 +127,7 @@ First, we introduce the HPC Certification Forum and the program in \Cref{sec:for
 Then, an overview of the status is given in \Cref{sec:status}.
 Next, the organization of competences is discussed in \Cref{sec:skills}.
 This leads to the prototypical approach for the certification process in \Cref{sec:certification}.
+In \Cref{sec:ecosystem} there the ecosystem is described.
 Related work is presented in \Cref{sec:related}.
 Finally, the article is concluded in \Cref{sec:conclusion}.
 
@@ -221,23 +223,26 @@ Each skill on the tree and even the inner nodes are described in more detail as 
   They are not the statements of what a practitioner will learn or do.
   At a basic level, aims are trying to answer two questions: What is the purpose of this skill?
   What is the skill trying to achieve?
-  \item \textbf{Learning outcomes (LOs)}: Defines briefly what what practitioners will know and learn.
+  \item \textbf{Learning outcomes (LOs)}: Defines briefly what practitioners will know and learn.
   The objected are statements what prospect learners are able to do, they should
   describe or define an action be clearly stated be measurable/quantifiable to some extent by using action words.
 \end{itemize}
 
 On the leaf level, a skill is fine-grained and orthogonal to other skills -- we scope the level of detail here to be able to be taught in a 1.5 hour lecture up to a 4 hour workshop.
 We believe this is a good granularity as it allows practitioners to cherry-pick the relevant skills and lecturers and examiners to prepare small lectures with well-defined content.
-For technology-dependent skills on leaf level (e.g., a specific file system or workload manager), often introductory skills are provided that provide the foundation to many specialized skills each representing a specific hardware or software technology.
-
+\ag{change sentence because provided that provide - \\
+Instead: For technology-dependent skills on leaf level (e.g., a specific file system or workload manager), often introductory skills are provided that provide the foundation to many specialized skills each representing a specific hardware or software technology.\\
+write it this way: For technology-dependent skills on leaf level (e.g., a specific file system or workload manager), often introductory skills are provided that contribute to the foundation of many specialized skills each representing a specific hardware or software technology.
+}
 The aggregation within the tree is similar to the aggregation found in education as part of “individual teaching events”, “those specified for modules or short courses”, and “those specified for whole degree programmes” \cite{hussey2008learning}.
 While that Hussey et al. conclude that LOs on the coarse grained level are not useful for high-level education, we use a similar concept, but relax the granularity/abstraction level of the learning outcome.
 
 \subsection{Skill Examples}
 
 Next, we present a generic skill that describes an inner-node in more details.
+\ag{change sentence because delivery and deliver in one sentence - 
 There is no actual delivery as a module or teaching event to deliver the content, it serves the purpose to inform the practitioner about the importance of the skill.
-
+}
 \begin{itemize}
   \item \textbf{ID}: USE4.2-B
   \item \textbf{Name}: Executing parallel applications
@@ -255,6 +260,13 @@ There is no actual delivery as a module or teaching event to deliver the content
     \item analyze the output generated from a job scheduler and describe the cause of typically generated errors
     \end{itemize}
 \end{itemize}
+
+\ag{When I was reading the "learning outcome" of USE4.2B, another category came to mind: 
+How to write job scripts? How to batch use?
+So why not create a case where the learning outcomes overlap?
+Since you did the skill examples with USE4.2 in 4.2, I would not do "Figure 1" with extension of PE4 but USE4.
+Then you can always look there.
+}
 
 The next leaf-level skill describes how workload management works in general in HPC regardless of the specific software that implements such concepts.
 It is intended that the aim and outcomes from the parent skill above are covered to some extend and refined into specifics.
@@ -303,6 +315,14 @@ While there is no formal dependency to the introduction (skill USE4.2.2-B), it i
   \item analyze the output generated from submitting to the job scheduler and typically generated errors
   \end{itemize}
 \end{itemize}
+
+\ag{I could put my slide set online and show the skill tree for the slide set. An example could be shown, there the content described in a skill tree are also explained in slide sets.
+Everything under USE 4.2.2 B, I have explained it in my slide set under "SLURM Usage on Goethe HLR cluster".
+\\
+What I have found and would like to try it out:  http://xlong88.github.io/draw-binary-tree-latex/
+Create recursive and automatically a Binary Tree with Tikz and Tikz-qtree.
+If we can do it generically then I will be one step ahead with my skill tree for the slide set.
+}
 
 As you can see from the definition of the skill, these learning outcomes are focusing on the core needs to actually use SLURM effectively.
 An intermediate skill could, e.g., add reservations.
