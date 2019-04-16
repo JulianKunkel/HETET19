@@ -19,6 +19,7 @@
 
 \newcommand{\jk}[1]{\todo[inline]{TODO: #1}}
 \newcommand{\ag}[1]{\todo[inline]{IDEA: #1}}
+\newcommand{\kh}[1]{\todo[inline]{KH: #1}}
 
 \begin{document}
 \title{One Year HPC Certification Forum in Retrospective}
@@ -127,7 +128,7 @@ First, we introduce the HPC Certification Forum and the program in \Cref{sec:for
 Then, an overview of the status is given in \Cref{sec:status}.
 Next, the organization of competences is discussed in \Cref{sec:skills}.
 This leads to the prototypical approach for the certification process in \Cref{sec:certification}.
-In \Cref{sec:ecosystem} there the ecosystem is described.
+In \Cref{sec:ecosystem} there\kh{Vorschlag: ohne there} the ecosystem is described.
 Related work is presented in \Cref{sec:related}.
 Finally, the article is concluded in \Cref{sec:conclusion}.
 
@@ -142,7 +143,7 @@ The HPCCF aims to support existing activities and complements them by providing 
 Thus, the HPCCF does not regulate the content of training material; we purposely separate the definition of skills and certificates with their examinations from content delivery.
 Similarly, the program does not prescribe a curriculum or any fixed order by which skills need to be obtained.
 
-The forum is organized using a Webpage\footnote{http://hpc-certification.org} and utilizes Slack for communication and monthly meetings.
+The forum is organized using a Webpage\footnote{http://hpc-certification.org} and utilizes Slack\kh{Vorschlag: kurzen Hinweis zu Slack ergänzen "...  cloud-based set of proprietary team collaboration tools ..." bzw. Link auf die Website} for communication and monthly meetings.
 Members are organized in different roles:
 Anyone can become an associate member in the HPCCF free of charge -- e.g., observing the status, being listed on the webpage.
 Full members must actively contribute to the program to some extent and have voting rights for the roles of the steering board.
@@ -161,12 +162,12 @@ We established communication channels via webpage, email and Slack for regular d
 Slack is also used to conduct our monthly open meetings between members and the steering board.
 At beginning we used video conferencing tools, but found that the chat provides a more inclusive discussion and the asynchronous nature is more productive.
 We also established relations with various stackholders involved in HPC education growing the participation in the forum.
-Meeting notes with action items are extracted from Slack and documented using Google Doc.
+Meeting notes with action items are extracted from Slack and documented using Google Doc\kh{Vorschlag: kurze Info zum Tool bzw. Link (wie bei Slack) ergänzen}.
 
 Note that until now contributions of members are voluntarily and follow the schedule as agreed between the contributor and the HPCCF board.
-We manage the prospect contributions in a Trello board; each member can manage its own card.
+We manage the prospect contributions in a Trello board\kh{Vorschlag: kurze Info zum Tool bzw. Link (wie bei Slack und Google Doc) ergänzen (Trello kennt ja nicht unbedingt jeder Leser); der Begriff "collaborative" sollte irgendwo untergebracht werden}; each member can manage its own card.
 
-\paragraph{Technical}
+\paragraph{Technical}\kh{"Management" (oberhalb) finde ich auf der Ebene alleinstehend gut, "Technical" etwas zu kurz, Vorschlag: "Technical Tasks" (o.ä.)}
 According to our goals, we address 1) the definition of competences; 2) the creation of certificates; 3) the examination of practitioners; and 4) an ecosystem of tools supporting them.
 
 For all these sub-goals we made substantial progress.
@@ -186,7 +187,7 @@ Prototypical processes and tools have been developed and deployed for curation o
 \label{sec:skills}
 
 A skill is defined as a set of competences (learning outcomes) and some metadata.
-This model can be compared to the classification of school knowledge, for example, the skill with the short name “addition” could describe the math skill of being able to add numbers successfully.
+This model can be compared to the classification of school knowledge, for example, the skill with the short name “addition” could describe the math skill of being able to add numbers successfully.\kh{ich halte ein prägnantes und gutes Beispiel hier für wichtig. Ohne den Übergang zum Expert Level gefällt mir die "Addition" auch gut, aber der Übergang zu "Expert" mit dem Addieren mehrerer Zahlen ist zwar auf abstrakter Ebene ok, aber doch etwas weit entfernt von der Praxis; so spontan fällt mir als analoges alternatives Beispiel aus dem Bereich der Geometrie das Zeichnen einer Geraden mit dem Lineal ("Basic Level") oder die Konstruktion eines Sechsecks mit Zirkel und Lineal ("Expert Level") ein}.
 Within a single skill, there can also be multiple levels (basic, intermediate, expert level) building upon each other that distinguish the expertise further.
 We expect that practitioners acquire the lower levels before progressing to more complex levels.
 In our addition example, \textit{basic level}, for example, may mean to be able to add two positive numbers while the \textit{expert level} of that skill could indicate to be able to add multiple numbers.
@@ -235,7 +236,7 @@ Instead: For technology-dependent skills on leaf level (e.g., a specific file sy
 write it this way: For technology-dependent skills on leaf level (e.g., a specific file system or workload manager), often introductory skills are provided that contribute to the foundation of many specialized skills each representing a specific hardware or software technology.
 }
 The aggregation within the tree is similar to the aggregation found in education as part of “individual teaching events”, “those specified for modules or short courses”, and “those specified for whole degree programmes” \cite{hussey2008learning}.
-While that Hussey et al. conclude that LOs on the coarse grained level are not useful for high-level education, we use a similar concept, but relax the granularity/abstraction level of the learning outcome.
+While that Hussey et al. conclude that LOs on the coarse grained level are not useful for high-level education, we use a similar concept, but relax the granularity/abstraction level of the learning outcome.\kh{den Satz habe ich nicht genau verstanden; als Leser würde ich mir die Kurzbegründung wünschen, die Hussey et al. für ihre Feststellung anführen}
 
 \subsection{Skill Examples}
 
@@ -290,13 +291,13 @@ It is intended that the aim and outcomes from the parent skill above are covered
 \end{itemize}
 
 
-The following skill describes a leaf-level skill for the usage of SLURM in the basic level.
+The following skill describes a leaf-level skill for the usage of SLURM in\kh{at} the basic level.
 While there is no formal dependency to the introduction (skill USE4.2.2-B), it is expected that practitioners have obtained the other skill before learning this one.
 
 \begin{itemize}
   \item \textbf{ID}: USE4.2.2-B
   \item \textbf{Name}: SLURM Workload manager
-  \item \textbf{Background}: SLURM is a widely used open-source workload manager providing various advanced features.
+  \item \textbf{Background}: SLURM is a widely used open-source workload manager providing various advanced features\kh{Vorschlag: einige der Highlights anführen: "... , like ..."}.
   \item \textbf{Aims}:
   \begin{itemize}
     \item To enable practitioners to use relevant tools to run and monitor parallel applications using SLURM.
@@ -305,11 +306,11 @@ While there is no formal dependency to the introduction (skill USE4.2.2-B), it i
   \item \textbf{Learning outcomes}:
   \begin{itemize}
   \item run interactive jobs with salloc, a batch job with sbatch
-  \item explain the architecture of SLURM, i.e., the role of slurmd, srun and the injection of environment variables
+  \item explain the architecture of SLURM, i.e., the role of slurmd\kh{slurmd haben wir beim "Basic Level" bisher nicht vorgesehen}, srun and the injection of environment variables
   \item explain the function of the tools: sacct, sbatch, salloc, srun, scancel, squeue, sinfo
   \item explain time limits and the benefit of a backfill scheduler
   \item comprehend that environment variables are set when running a job
-  \item comprehend and describe the expected behavior of a simple job scripts
+  \item comprehend and describe the expected behavior of a simple job scripts\kh{typo?}
   \item comprehend how variables are prioritized when using command line and a script
   \item change a provided job template and embed them into shell scripts to run a variety of parallel applications
   \item analyze the output generated from submitting to the job scheduler and typically generated errors
@@ -394,7 +395,7 @@ A PDF with the key information needed for a meaningful certificate (for a draft,
 The name and identifier for the certificate is found in the center and below (here 4711 and “the basic certificate”).
 
 Secondly, a text file is given to the user that provides the same information.
-It is PGP signed using the private key of the HPC Certification Forum to allow verification with the published public key.
+It is PGP signed using the private key of the HPC Certification Forum to allow verification with the published\kh{"published" wäre redundant} public key.
 It also contains a verification URL that can be given to a third-party allowing verification of the information.
 
 The file looks as follows:
@@ -416,7 +417,7 @@ Verification URL: https://hpc-certification.org/[...]
   \caption{Draft for an awarded certificate}
   \label{fig:awardedCertificate}
 \end{figure}
-
+\kh{Vorschlag: "The basic certificate" ist ja sehr generisch und verlangt vom Leser (vermeidbares) Abstraktionsvermögen; ein prägnantes und praxsinahes Beispiel erscheint mir hier geeigneter}
 
 \section{Ecosystem}
 \label{sec:ecosystem}
@@ -432,7 +433,7 @@ Firstly, an author of training material is allowed to indicate on the training m
 which skills are covered by the material completely or partially.
 We provide a seal that can be used for that purpose (see \Cref{fig:seal-teaching}).
 The reference to the HPCCF and the seal can be used free of charge under the condition that the developer of the training material
-registers a link to the material or course and their email address on our webpage using an online form.
+registers a link to the material or course and their\kh{Plural hier beabsichtigt (Bezug?)} email address on our webpage using an online form.
 That way, the HPCCF is informed about the usage of the seal.
 
 Secondly, we will link on our webpage the endorsed training material for the individual skills and certificates.
@@ -451,7 +452,7 @@ Ultimately, the resulting training material will complement each other leading t
 \end{figure}
 
 
-\subsection{Navigation}
+\subsection{Navigation}\kh{Vorschlag Unterkapitel in "Results" umbenennen oder an anderer Stelle aus "Erwartungsgründen" ein "Results"-Kapitel ergänzen (am besten natürlich auf der Hauptgliederungsebene, aber das wird vermutlich schwierig werden)}
 %\paragraph{Navigation}
 Thanks to the contributions of the PeCoH project, a JavaScript prototype enables the embedding of a navigable skill tree into a webpage.
 The script can be used by different stackholders to present their own view on the skill-tree.
@@ -499,7 +500,7 @@ Increase sharing of teaching materials
 Documentation of taught skills simplified
 Identify missing teaching activities
 Tailor skill-tree specifically to users
-Correlate lack of skills with efficient us
+Correlate lack of skills with efficient us\kh{diese Subsection ist vermutlich noch in Arbeit; Groß-/ Kleinschreibung?}
 
 Making clear what skills are required of or recommended for a competent HPC user would benefit both the HPC service providers and practitioners.
 Moreover, it would allow centres to bundle together skills that are most beneficial for specific user roles and scientific domains.
