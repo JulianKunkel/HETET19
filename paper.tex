@@ -115,25 +115,27 @@ holistic ecosystem beneficial for all stakeholders in HPC education.
 
 \section{Introduction}
 
-There is a generally accepted set of skills and competencies necessary to efficiently use HPC resources.
+There is a generally accepted set of skills and competencies necessary to efficiently use HPC resources. 
 This skill set depends on the role and domain of the practitioner but also on the available infrastructure of the center providing the computing resources.
 For example, a scientist needing to run an application on a specific machine may need basic skills in Linux, MPI, environment modules, and knowledge about the batch scheduler, e.g., Slurm.
-Understanding Slurm is a good example of a very fine-grained skill, indeed we can identify “resource management” as a generic skill that illustrates concepts across the rich variety of available resource managers.
-Institutions which operate HPC systems typically offer regularly teaching events about general aspects of their supercomputer's hard- and software architecture and about the software environment around parallel programming and optimization.
-The learning material provided by an HPC center, however, is geared to the special demands of the institutions they support and its specific HPC environment.
-This content typically covers a small part of basic HPC skills which are necessary to use other HPC systems.
-Moreover, they do not attest the users to have a certain competence.
-Certificates are widely used in industry to attest certain knowledge but, so far, there is no similar approach for HPC training.
+Now rather than providing that scientists with a list of instructions to be followed in a copy and paste fashion or a never-ending list of things they should know, we want them to understand each of the required steps without having to learner everything about it, but at the same time understand how it fits into the bigger picture of using an HPC system. 
+For instance, understanding Slurm is a good example of a very fine-grained skill that fits under a more generic skill defined as "resource management", illustrating concepts across the rich variety of available resource managers.
 
-This article describes the current status of the certification program offered by the HPC Certification Forum.
-Our previous work provided a brief overview of the evolution from the project that sparked  the HPC Certification Forum \cite{TAHCPKHHSS19} while this article provides details highlighting mechanisms and design decisions.
+Most institutions operating HPC systems offer regular training events focusing on general aspects of their supercomputer's hardware architecture, software stack, application development environment  and various tuning and debugging tools.   
+It is understandable why the materials they are geared towards the special demands of the institutions they support and its specific HPC environment. 
+The problem is that teaching content typically covers only a small part of basic HPC skills necessary to use other HPC systems. 
+This approach of teaching only specific implementations, tools or workflows, instead of concepts behind them makes a move to a different system or tool unnecessary complicated. 
+Narrowing the scope of training events make sense from the HPC provider perspective, but is not very conducive to development of more comprehensive learning environment that provides assessment and certifies the newly acquired skills. So although, certificates are used widely in IT industry to verify certain knowledge, until now there was no similar approach for HPC training. 
+It is, however, clear that a certification scheme could address some of the challenges stemming from the constantly growing training needs of our community,  
+
+This article describes the current status of the certification program initiated by the HPC Certification Forum.
+Our previous work provided a brief overview of the evolution from the project that sparked the HPC Certification Forum \cite{TAHCPKHHSS19} while this article provides details on adopted mechanisms and design decisions.
 
 The article is structured as follows:
-First, we introduce the HPC Certification Forum and the program in \Cref{sec:forum}.
-Then, an overview of the status is given in \Cref{sec:status}.
-Next, the organization of competencies is discussed in \Cref{sec:skills}.
-This leads to the prototypical approach for the certification process in \Cref{sec:certification}.
-In \Cref{sec:ecosystem} there\kh{Vorschlag: ohne there} the ecosystem is described.
+First, in \Cref{sec:forum} we introduce the HPC Certification Forum and the certification program. 
+Then, an overview of the status is given in \Cref{sec:status}, followed by the organisation of competencies discussed in \Cref{sec:skills}.
+This leads to the proposal for the certification process in \Cref{sec:certification}.
+In \Cref{sec:ecosystem} the whole learning ecosystem is described.
 Related work is presented in \Cref{sec:related}.
 Finally, the article is concluded in \Cref{sec:conclusion}.
 
