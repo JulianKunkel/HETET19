@@ -87,10 +87,10 @@
 
 \begin{abstract}
   The HPC community has always considered the training of new and existing HPC practitioners to be of high importance to its growth.
-  This diversification of HPC practitioners challenges the traditional training approaches, which are not able to satisfy the specific needs of users, often coming from non-traditionally HPC disciplines, and only interested in learning a particular set of competences.
+  This diversification of HPC practitioners challenges the traditional training approaches, which are not able to satisfy the specific needs of users, often coming from non-traditionally HPC disciplines, and only interested in learning a particular set of competencies.
   Challenges for HPC centres are to identify and overcome the gaps in users’ knowledge, while users struggle to identify relevant skills.
 
-  With the HPC Certification Forum we aim to clearly categorize, define, and examine competences which brings benefit to all stakeholders involved in training.
+  With the HPC Certification Forum we aim to clearly categorize, define, and examine competencies which brings benefit to all stakeholders involved in training.
   In this article, we report the status and progress this independent body has made during the first year of its existence: processes and prototypes have been drafted that will  mature to a holistic ecosystem beneficial for all stackholders in HPC education.
 \end{abstract}
 
@@ -112,8 +112,8 @@
 
 There is a generally accepted set of skills and competencies necessary to efficiently use HPC resources.
 This skill set depends on the role and domain of the practitioner but also on the available infrastructure of the center providing the computing resources.
-For example, a scientist needing to run an application on a specific machine may need basic skills in Linux, MPI, environment modules, and knowledge about the batch scheduler, e.g., SLURM.
-Understanding SLURM is a good example of a very fine-grained skill, indeed we can identify “resource management” as a generic skill that illustrates concepts across the rich variety of available resource managers.
+For example, a scientist needing to run an application on a specific machine may need basic skills in Linux, MPI, environment modules, and knowledge about the batch scheduler, e.g., Slurm.
+Understanding Slurm is a good example of a very fine-grained skill, indeed we can identify “resource management” as a generic skill that illustrates concepts across the rich variety of available resource managers.
 Institutions which operate HPC systems typically offer regularly teaching events about general aspects of their supercomputer's hard- and software architecture and about the software environment around parallel programming and optimization.
 The learning material provided by an HPC center, however, is geared to the special demands of the institutions they support and its specific HPC environment.
 This content typically covers a small part of basic HPC skills which are necessary to use other HPC systems.
@@ -126,7 +126,7 @@ Our previous work provided a brief overview of the evolution from the project th
 The article is structured as follows:
 First, we introduce the HPC Certification Forum and the program in \Cref{sec:forum}.
 Then, an overview of the status is given in \Cref{sec:status}.
-Next, the organization of competences is discussed in \Cref{sec:skills}.
+Next, the organization of competencies is discussed in \Cref{sec:skills}.
 This leads to the prototypical approach for the certification process in \Cref{sec:certification}.
 In \Cref{sec:ecosystem} there\kh{Vorschlag: ohne there} the ecosystem is described.
 Related work is presented in \Cref{sec:related}.
@@ -136,10 +136,10 @@ Finally, the article is concluded in \Cref{sec:conclusion}.
 \label{sec:forum}
 
 The HPC Certification Forum (HPCCF) has the role of a (virtual) central authority to curate and maintain a certification program.
-The program consists of the definition of competences, the creation of certificates, and the examination of practitioners to attest that they possess certain competences.
-Moreover, the forum supports tools and an ecosystem around the competences.
+The program consists of the definition of competencies, the creation of certificates, and the examination of practitioners to attest that they possess certain competencies.
+Moreover, the forum supports tools and an ecosystem around the competencies.
 
-The HPCCF aims to support existing activities and complements them by providing a unified and clear way of mapping out the relevant HPC competences for practitioners.
+The HPCCF aims to support existing activities and complements them by providing a unified and clear way of mapping out the relevant HPC competencies for practitioners.
 Thus, the HPCCF does not regulate the content of training material; we purposely separate the definition of skills and certificates with their examinations from content delivery.
 Similarly, the program does not prescribe a curriculum or any fixed order by which skills need to be obtained.
 
@@ -168,17 +168,17 @@ Note that until now contributions of members are voluntarily and follow the sche
 We manage the prospect contributions in a Trello board\kh{Vorschlag: kurze Info zum Tool bzw. Link (wie bei Slack und Google Doc) ergänzen (Trello kennt ja nicht unbedingt jeder Leser); der Begriff "collaborative" sollte irgendwo untergebracht werden}; each member can manage its own card.
 
 \paragraph{Technical}\kh{"Management" (oberhalb) finde ich auf der Ebene alleinstehend gut, "Technical" etwas zu kurz, Vorschlag: "Technical Tasks" (o.ä.)}
-According to our goals, we address 1) the definition of competences; 2) the creation of certificates; 3) the examination of practitioners; and 4) an ecosystem of tools supporting them.
+According to our goals, we address 1) the definition of competencies; 2) the creation of certificates; 3) the examination of practitioners; and 4) an ecosystem of tools supporting them.
 
 For all these sub-goals we made substantial progress.
-While the definition and organization of competences was the main focus, we prototyped various tools and processes that embed the competences into the wider education ecosystem.
+While the definition and organization of competencies was the main focus, we prototyped various tools and processes that embed the competencies into the wider education ecosystem.
 
 Firstly, we finalized the templates for the description of a competence considering pedagogic literature from higher education.
-We are still working on mapping out all relevant competences, but included also new topics that will be covered in the first version of the certification program.
+We are still working on mapping out all relevant competencies, but included also new topics that will be covered in the first version of the certification program.
 
-The definition of the competences covered by the program is version controlled with Git.
-The competences are available in XML and Markdown format.
-A Wiki allows to edit the competences and simplifies access for non-technical users.
+The definition of the competencies covered by the program is version controlled with Git.
+The competencies are available in XML and Markdown format.
+A Wiki allows to edit the competencies and simplifies access for non-technical users.
 A navigable JavaScript representation of the skill tree is available that can be customized for the HPCCF but also for end-users.
 
 Prototypical processes and tools have been developed and deployed for curation of the examination questions and for conducting an online multiple-choice examination.
@@ -186,7 +186,7 @@ Prototypical processes and tools have been developed and deployed for curation o
 \section{Skills}
 \label{sec:skills}
 
-A skill is defined as a set of competences (learning outcomes) and some metadata.
+A skill is defined as a set of competencies (learning outcomes) and some metadata.
 This model can be compared to the classification of school knowledge, for example, the skill with the short name “addition” could describe the math skill of being able to add numbers successfully.\kh{ich halte ein prägnantes und gutes Beispiel hier für wichtig. Ohne den Übergang zum Expert Level gefällt mir die "Addition" auch gut, aber der Übergang zu "Expert" mit dem Addieren mehrerer Zahlen ist zwar auf abstrakter Ebene ok, aber doch etwas weit entfernt von der Praxis; so spontan fällt mir als analoges alternatives Beispiel aus dem Bereich der Geometrie das Zeichnen einer Geraden mit dem Lineal ("Basic Level") oder die Konstruktion eines Sechsecks mit Zirkel und Lineal ("Expert Level") ein}.
 Within a single skill, there can also be multiple levels (basic, intermediate, expert level) building upon each other that distinguish the expertise further.
 We expect that practitioners acquire the lower levels before progressing to more complex levels.
@@ -208,7 +208,7 @@ This import allows to reuse the definitions of the skills while still allowing u
 \begin{figure*}[tb!]
 	\centering
 	\includegraphics[width=15.0cm]{skill-tree}
-	\caption{Skill tree top level competences with an expansion of PE4}
+	\caption{Skill tree top level competencies with an expansion of PE4}
 	\label{fig:skill-tree}
 \end{figure*}
 
@@ -291,22 +291,22 @@ It is intended that the aim and outcomes from the parent skill above are covered
 \end{itemize}
 
 
-The following skill describes a leaf-level skill for the usage of SLURM in\kh{at} the basic level.
+The following skill describes a leaf-level skill for the usage of Slurm in\kh{at} the basic level.
 While there is no formal dependency to the introduction (skill USE4.2.2-B), it is expected that practitioners have obtained the other skill before learning this one.
 
 \begin{itemize}
   \item \textbf{ID}: USE4.2.2-B
-  \item \textbf{Name}: SLURM Workload manager
-  \item \textbf{Background}: SLURM is a widely used open-source workload manager providing various advanced features\kh{Vorschlag: einige der Highlights anführen: "... , like ..."}.
+  \item \textbf{Name}: Slurm Workload manager
+  \item \textbf{Background}: Slurm is a widely used open-source workload manager providing various advanced features\kh{Vorschlag: einige der Highlights anführen: "... , like ..."}.
   \item \textbf{Aims}:
   \begin{itemize}
-    \item To enable practitioners to use relevant tools to run and monitor parallel applications using SLURM.
-    \item To enable practitioners to comprehend and describe the basic architecture of SLURM and the suite of tools.
+    \item To enable practitioners to use relevant tools to run and monitor parallel applications using Slurm.
+    \item To enable practitioners to comprehend and describe the basic architecture of Slurm and the suite of tools.
   \end{itemize}
   \item \textbf{Learning outcomes}:
   \begin{itemize}
   \item run interactive jobs with salloc, a batch job with sbatch
-  \item explain the architecture of SLURM, i.e., the role of slurmd\kh{slurmd haben wir beim "Basic Level" bisher nicht vorgesehen}, srun and the injection of environment variables
+  \item explain the architecture of Slurm, i.e., the role of Slurmd\kh{Slurmd haben wir beim "Basic Level" bisher nicht vorgesehen}, srun and the injection of environment variables
   \item explain the function of the tools: sacct, sbatch, salloc, srun, scancel, squeue, sinfo
   \item explain time limits and the benefit of a backfill scheduler
   \item comprehend that environment variables are set when running a job
@@ -318,14 +318,14 @@ While there is no formal dependency to the introduction (skill USE4.2.2-B), it i
 \end{itemize}
 
 \ag{I could put my slide set online and show the skill tree for the slide set. An example could be shown, there the content described in a skill tree are also explained in slide sets.
-Everything under USE 4.2.2 B, I have explained it in my slide set under "SLURM Usage on Goethe HLR cluster".
+Everything under USE 4.2.2 B, I have explained it in my slide set under "Slurm Usage on Goethe HLR cluster".
 \\
 What I have found and would like to try it out:  http://xlong88.github.io/draw-binary-tree-latex/
 Create recursive and automatically a Binary Tree with Tikz and Tikz-qtree.
 If we can do it generically then I will be one step ahead with my skill tree for the slide set.
 }
 
-As you can see from the definition of the skill, these learning outcomes are focusing on the core needs to actually use SLURM effectively.
+As you can see from the definition of the skill, these learning outcomes are focusing on the core needs to actually use Slurm effectively.
 An intermediate skill could, e.g., add reservations.
 
 %\begin{itemize}
@@ -370,7 +370,7 @@ At this stage, we do not store any information about the user on the server.
 The email contains a link that will start the examination.
 The user chooses to start the examination by clicking on the link; then the information about the user and the time of starting the examination is stored in a temporary database.
 
-The summative assessment itself is conducting using multiple choice questions.
+The summative assessment itself is conducted using multiple choice questions.
 Therefore, for each skill, we will be developing a pool of questions but also allow contribution of questions.
 A question has more possible answers (e.g., 10) -- the practitioner has to select if each  statement is true or false.
 An examination consists of randomly selected questions and five answers per question are selected.
@@ -491,7 +491,7 @@ HPC practitioners
 Increase motivation to participate
 (Certificates are recognized in CV)
 Validate knowledge via tests
-Browse of relevant competences
+Browse of relevant competencies
 Identify recommended and required skills
 Compare teaching offers across sites
 Data centers
@@ -504,7 +504,7 @@ Correlate lack of skills with efficient us\kh{diese Subsection ist vermutlich no
 
 Making clear what skills are required of or recommended for a competent HPC user would benefit both the HPC service providers and practitioners.
 Moreover, it would allow centres to bundle together skills that are most beneficial for specific user roles and scientific domains.
-From the perspective of content providers, existing training material can be mapped to competences allowing users to quickly identify and learn the skills they require.
+From the perspective of content providers, existing training material can be mapped to competencies allowing users to quickly identify and learn the skills they require.
 Finally, the certificates recognized by the whole HPC community simplify inter-comparison of independently offered courses and provide additional incentive for participation.
 
 
