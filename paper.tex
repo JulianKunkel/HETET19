@@ -17,8 +17,8 @@
 \graphicspath{{./fig/}}
 \DeclareGraphicsExtensions{.png,.pdf,.jpg,.jpeg}
 
-\newcommand{\jk}[1]{\todo[inline]{TODO: #1}}
-\newcommand{\ag}[1]{\todo[inline]{IDEA: #1}}
+\newcommand{\jk}[1]{\todo[inline]{JK: #1}}
+\newcommand{\ag}[1]{\todo[inline]{Anja: #1}}
 \newcommand{\kh}[1]{\todo[inline]{KH: #1}}
 
 \begin{document}
@@ -88,14 +88,14 @@
 \begin{abstract}
 
 The ever-changing nature of HPC has always compelled the HPC community to focus a lot of effort into training of new and existing practitioners. Historically, these efforts were tailored
- around a typical group of users possessing, due to their background, a certain set of programming skills. However, as HPC has become more diverse in terms of hardware, software and 
- the user background, the traditional training approaches became insufficient in addressing training needs of our community. This increasingly complicated HPC landscape makes 
- developement and delivery of new training materials challenging. How should we develop training for users, often coming from non-traditionally HPC disciplines, and only interested in 
- learning a particular set of skills? How can we satisfy their training needs if we don't really understand what these are? It's clear that HPC centres struggle to identify and overcome the 
- gaps in users' knowledge, while users struggle to identify skills required to perform their tasks. 
+ around a typical group of users possessing, due to their background, a certain set of programming skills. However, as HPC has become more diverse in terms of hardware, software and
+ the user background, the traditional training approaches became insufficient in addressing training needs of our community. This increasingly complicated HPC landscape makes
+ development and delivery of new training materials challenging. How should we develop training for users, often coming from non-traditionally HPC disciplines, and only interested in
+ learning a particular set of skills? How can we satisfy their training needs if we don't really understand what these are? It's clear that HPC centres struggle to identify and overcome the
+ gaps in users' knowledge, while users struggle to identify skills required to perform their tasks.
 
-With the HPC Certification Forum we aim to clearly categorise, define, and examine competencies expected from proficient HPC practitioners. 
-In this article, we report the status and progress this independent body has made during the first year of its existence. The drafted processes and prototypes are expected to mature into a 
+With the HPC Certification Forum we aim to clearly categorise, define, and examine competencies expected from proficient HPC practitioners.
+In this article, we report the status and progress this independent body has made during the first year of its existence. The drafted processes and prototypes are expected to mature into a
 holistic ecosystem beneficial for all stakeholders in HPC education.
 \end{abstract}
 
@@ -115,24 +115,24 @@ holistic ecosystem beneficial for all stakeholders in HPC education.
 
 \section{Introduction}
 
-There is a generally accepted set of skills and competencies necessary to efficiently use HPC resources. 
+There is a generally accepted set of skills and competencies necessary to efficiently use HPC resources.
 This skill set depends on the role and domain of the practitioner but also on the available infrastructure of the center providing the computing resources.
 For example, a scientist needing to run an application on a specific machine may need basic skills in Linux, MPI, environment modules, and knowledge about the batch scheduler, e.g., Slurm.
-Now rather than providing that scientists with a list of instructions to be followed in a copy and paste fashion or a never-ending list of things they should know, we want them to understand each of the required steps without having to learner everything about it, but at the same time understand how it fits into the bigger picture of using an HPC system. 
+Now rather than providing that scientists with a list of instructions to be followed in a copy and paste fashion or a never-ending list of things they should know, we want them to understand each of the required steps without having to learner everything about it, but at the same time understand how it fits into the bigger picture of using an HPC system.
 For instance, understanding Slurm is a good example of a very fine-grained skill that fits under a more generic skill defined as "resource management", illustrating concepts across the rich variety of available resource managers.
 
-Most institutions operating HPC systems offer regular training events focusing on general aspects of their supercomputer's hardware architecture, software stack, application development environment  and various tuning and debugging tools.   
-It is understandable why the materials they are geared towards the special demands of the institutions they support and its specific HPC environment. 
-The problem is that teaching content typically covers only a small part of basic HPC skills necessary to use other HPC systems. 
-This approach of teaching only specific implementations, tools or workflows, instead of concepts behind them makes a move to a different system or tool unnecessary complicated. 
-Narrowing the scope of training events make sense from the HPC provider perspective, but is not very conducive to development of more comprehensive learning environment that provides assessment and certifies the newly acquired skills. So although, certificates are used widely in IT industry to verify certain knowledge, until now there was no similar approach for HPC training. 
-It is, however, clear that a certification scheme could address some of the challenges stemming from the constantly growing training needs of our community,  
+Most institutions operating HPC systems offer regular training events focusing on general aspects of their supercomputer's hardware architecture, software stack, application development environment  and various tuning and debugging tools.
+It is understandable why the materials they are geared towards the special demands of the institutions they support and its specific HPC environment.
+The problem is that teaching content typically covers only a small part of basic HPC skills necessary to use other HPC systems.
+This approach of teaching only specific implementations, tools or workflows, instead of concepts behind them makes a move to a different system or tool unnecessary complicated.
+Narrowing the scope of training events make sense from the HPC provider perspective, but is not very conducive to development of more comprehensive learning environment that provides assessment and certifies the newly acquired skills. So although, certificates are used widely in IT industry to verify certain knowledge, until now there was no similar approach for HPC training.
+It is, however, clear that a mapping of competences and certification scheme could address some of the challenges stemming from the constantly growing training needs of our community,
 
 This article describes the current status of the certification program initiated by the HPC Certification Forum.
 Our previous work provided a brief overview of the evolution from the project that sparked the HPC Certification Forum \cite{TAHCPKHHSS19} while this article provides details on adopted mechanisms and design decisions.
 
 The article is structured as follows:
-First, in \Cref{sec:forum} we introduce the HPC Certification Forum and the certification program. 
+First, in \Cref{sec:forum} we introduce the HPC Certification Forum and the certification program.
 Then, an overview of the status is given in \Cref{sec:status}, followed by the organisation of competencies discussed in \Cref{sec:skills}.
 This leads to the proposal for the certification process in \Cref{sec:certification}.
 In \Cref{sec:ecosystem} the whole learning ecosystem is described.
@@ -143,18 +143,18 @@ Finally, the article is concluded in \Cref{sec:conclusion}.
 \label{sec:forum}
 
 The HPC Certification Forum (HPCCF) has the role of a (virtual) central authority to curate and maintain the proposed certification program.
-The program consists of three parts: the tree of defined competencies, the examination of practitioners to prove they posses those skills, and finally the certification demonstrating their knowledge.     
+The program consists of three parts: the tree of defined competencies, the examination of practitioners to prove they posses those skills, and finally the certification demonstrating their knowledge.
 Although, the forum is not involved in development of any training materials or tools, it supports the ecosystem around the competencies.
 
 The HPCCF aims to support existing activities and complements them by providing a unified and clear way of mapping out the relevant HPC competencies.
 Thus, the HPCCF does not regulate the content of training material; we purposely separate the definition of skills, the examination and the certification from content delivery.
-Similarly, the program does not prescribe a curriculum or any fixed order by which skills need to be obtained. It eases the navigation between different competencies without being overly restrictive. 
+Similarly, the program does not prescribe a curriculum or any fixed order by which skills need to be obtained. It eases the navigation between different competencies without being overly restrictive.
 
 The forum is organised around a Webpage\footnote{http://hpc-certification.org},  a GitHub repository\footnote{https://github.com/HPC-certification-forum},  and a could-based team collaboration tool (Slack) for communication and monthly meetings.
-The membership is divined into three categories: associate, full and steering board.   
+The membership is divined into three categories: associate, full and steering board.
 Anyone can become an associate member free of charge, allowing a passive involvement -- e.g., observing the status, being listed on the webpage.
 Full members must actively contribute to the program and have voting rights for the roles of the steering board.
-The steering board directs the overall activities and is organised in different responsibilities, i.e., into topic-specific chairs. At the moment the steering board has 9 members. 
+The steering board directs the overall activities and is organised in different responsibilities, i.e., into topic-specific chairs. At the moment the steering board has 9 members.
 
 
 \section{Overview of the Activities}
@@ -174,7 +174,7 @@ The ongoing conversation with various stakeholders involved in HPC education and
 The member's contributions are voluntarily and follow the schedule agreed between the contributor and the HPCCF board.
 The prospective contributions are managed in Trello (a web-based list-making collaborative application), in which each member can manage their own card.
 
-\paragraph{Technical Tasks}
+\paragraph{Technical tasks}
 The tasks we set out to accomplish are:  1) the definition of competencies; 2) the examination of practitioners;  3) the creation of certificates; and 4) the reinforcement of an ecosystem of tools supporting them.
 
 For all these sub-goals we made substantial progress.
@@ -245,10 +245,8 @@ While that Hussey et al. conclude that LOs on the coarse grained level are not u
 
 \subsection{Skill Examples}
 
-Next, we present a generic skill that describes an inner-node in more details.
-\ag{change sentence because delivery and deliver in one sentence - 
-There is no actual delivery as a module or teaching event to deliver the content, it serves the purpose to inform the practitioner about the importance of the skill.
-}
+Next, we present a generic competence that describes an inner-node of the skill tree in more details.
+
 \begin{itemize}
   \item \textbf{ID}: USE4.2-B
   \item \textbf{Name}: Executing parallel applications
@@ -267,7 +265,7 @@ There is no actual delivery as a module or teaching event to deliver the content
     \end{itemize}
 \end{itemize}
 
-\ag{When I was reading the "learning outcome" of USE4.2B, another category came to mind: 
+\ag{When I was reading the "learning outcome" of USE4.2B, another category came to mind:
 How to write job scripts? How to batch use?
 So why not create a case where the learning outcomes overlap?
 Since you did the skill examples with USE4.2 in 4.2, I would not do "Figure 1" with extension of PE4 but USE4.
@@ -296,13 +294,13 @@ It is intended that the aim and outcomes from the parent skill above are covered
 \end{itemize}
 
 
-The following skill describes a leaf-level skill for the usage of Slurm in\kh{at} the basic level.
+The following skill describes a leaf-level skill for the usage of Slurm at the basic level.
 While there is no formal dependency to the introduction (skill USE4.2.2-B), it is expected that practitioners have obtained the other skill before learning this one.
 
 \begin{itemize}
   \item \textbf{ID}: USE4.2.2-B
   \item \textbf{Name}: Slurm Workload manager
-  \item \textbf{Background}: Slurm is a widely used open-source workload manager providing various advanced features\kh{Vorschlag: einige der Highlights anführen: "... , like ..."}.
+  \item \textbf{Background}: Slurm is a widely used open-source workload manager providing various advanced features. % \kh{Vorschlag: einige der Highlights anführen: "... , like ..."}. Good idea, but later!
   \item \textbf{Aims}:
   \begin{itemize}
     \item To enable practitioners to use relevant tools to run and monitor parallel applications using Slurm.
@@ -311,11 +309,11 @@ While there is no formal dependency to the introduction (skill USE4.2.2-B), it i
   \item \textbf{Learning outcomes}:
   \begin{itemize}
   \item run interactive jobs with salloc, a batch job with sbatch
-  \item explain the architecture of Slurm, i.e., the role of Slurmd\kh{Slurmd haben wir beim "Basic Level" bisher nicht vorgesehen}, srun and the injection of environment variables
+  \item explain the architecture of Slurm, i.e., the role of Slurmd, srun and the injection of environment variables
   \item explain the function of the tools: sacct, sbatch, salloc, srun, scancel, squeue, sinfo
   \item explain time limits and the benefit of a backfill scheduler
   \item comprehend that environment variables are set when running a job
-  \item comprehend and describe the expected behavior of a simple job scripts\kh{typo?}
+  \item comprehend and describe the expected behavior of a simple job script
   \item comprehend how variables are prioritized when using command line and a script
   \item change a provided job template and embed them into shell scripts to run a variety of parallel applications
   \item analyze the output generated from submitting to the job scheduler and typically generated errors
@@ -397,10 +395,11 @@ We assume that high quality training material for individual skills will offer m
 
 Upon successful assessment, a certificate is awarded, it consists of two parts:
 A PDF with the key information needed for a meaningful certificate (for a draft, see \Cref{fig:awardedCertificate}).
-The name and identifier for the certificate is found in the center and below (here 4711 and “the basic certificate”).
+The name and identifier for the certificate is found in the center and below (here 1 and “HPC Driving License”).
+Similar to a driving license, this particular certificate could provide the minimum set of knowledge to understand and use a generic supercomputer.
 
 Secondly, a text file is given to the user that provides the same information.
-It is PGP signed using the private key of the HPC Certification Forum to allow verification with the published\kh{"published" wäre redundant} public key.
+It is PGP signed using the private key of the HPC Certification Forum to allow verification with the  public key.
 It also contains a verification URL that can be given to a third-party allowing verification of the information.
 
 The file looks as follows:
@@ -410,7 +409,7 @@ Hash: SHA512
 HPC Certification Forum Certificate
 This text confirms that "Julian M. Kunkel" has
 successfully obtained the certificate
-"The basic certificate" (id: 4711) at 02/2019.
+"HPC driving license" (id: 1) at 02/2019.
 Verification URL: https://hpc-certification.org/[...]
 -----BEGIN PGP SIGNATURE-----
 [...]
@@ -422,7 +421,6 @@ Verification URL: https://hpc-certification.org/[...]
   \caption{Draft for an awarded certificate}
   \label{fig:awardedCertificate}
 \end{figure}
-\kh{Vorschlag: "The basic certificate" ist ja sehr generisch und verlangt vom Leser (vermeidbares) Abstraktionsvermögen; ein prägnantes und praxsinahes Beispiel erscheint mir hier geeigneter}
 
 \section{Ecosystem}
 \label{sec:ecosystem}
@@ -438,7 +436,7 @@ Firstly, an author of training material is allowed to indicate on the training m
 which skills are covered by the material completely or partially.
 We provide a seal that can be used for that purpose (see \Cref{fig:seal-teaching}).
 The reference to the HPCCF and the seal can be used free of charge under the condition that the developer of the training material
-registers a link to the material or course and their\kh{Plural hier beabsichtigt (Bezug?)} email address on our webpage using an online form.
+registers a link to the material or course on our webpage using an online form. %\footnote{Details of the link will show the email address.}
 That way, the HPCCF is informed about the usage of the seal.
 
 Secondly, we will link on our webpage the endorsed training material for the individual skills and certificates.
