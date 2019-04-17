@@ -88,14 +88,14 @@
 \begin{abstract}
 
 The ever-changing nature of HPC has always compelled the HPC community to focus a lot of effort into training of new and existing practitioners. Historically, these efforts were tailored
- around a typical group of users possessing, due to their background, a certain set of programming skills. However, as HPC has become more diverse in terms of hardware, software and 
- the user background, the traditional training approaches became insufficient in addressing training needs of our community. This increasingly complicated HPC landscape makes 
- developement and delivery of new training materials challenging. How should we develop training for users, often coming from non-traditionally HPC disciplines, and only interested in 
- learning a particular set of skills? How can we satisfy their training needs if we don't really understand what these are? It's clear that HPC centres struggle to identify and overcome the 
- gaps in users' knowledge, while users struggle to identify skills required to perform their tasks. 
+ around a typical group of users possessing, due to their background, a certain set of programming skills. However, as HPC has become more diverse in terms of hardware, software and
+ the user background, the traditional training approaches became insufficient in addressing training needs of our community. This increasingly complicated HPC landscape makes
+ development and delivery of new training materials challenging. How should we develop training for users, often coming from non-traditionally HPC disciplines, and only interested in
+ learning a particular set of skills? How can we satisfy their training needs if we don't really understand what these are? It's clear that HPC centres struggle to identify and overcome the
+ gaps in users' knowledge, while users struggle to identify skills required to perform their tasks.
 
-With the HPC Certification Forum we aim to clearly categorise, define, and examine competencies expected from proficient HPC practitioners. 
-In this article, we report the status and progress this independent body has made during the first year of its existence. The drafted processes and prototypes are expected to mature into a 
+With the HPC Certification Forum we aim to clearly categorise, define, and examine competencies expected from proficient HPC practitioners.
+In this article, we report the status and progress this independent body has made during the first year of its existence. The drafted processes and prototypes are expected to mature into a
 holistic ecosystem beneficial for all stakeholders in HPC education.
 \end{abstract}
 
@@ -115,24 +115,24 @@ holistic ecosystem beneficial for all stakeholders in HPC education.
 
 \section{Introduction}
 
-There is a generally accepted set of skills and competencies necessary to efficiently use HPC resources. 
+There is a generally accepted set of skills and competencies necessary to efficiently use HPC resources.
 This skill set depends on the role and domain of the practitioner but also on the available infrastructure of the center providing the computing resources.
 For example, a scientist needing to run an application on a specific machine may need basic skills in Linux, MPI, environment modules, and knowledge about the batch scheduler, e.g., Slurm.
-Now rather than providing that scientists with a list of instructions to be followed in a copy and paste fashion or a never-ending list of things they should know, we want them to understand each of the required steps without having to learner everything about it, but at the same time understand how it fits into the bigger picture of using an HPC system. 
+Now rather than providing that scientists with a list of instructions to be followed in a copy and paste fashion or a never-ending list of things they should know, we want them to understand each of the required steps without having to learner everything about it, but at the same time understand how it fits into the bigger picture of using an HPC system.
 For instance, understanding Slurm is a good example of a very fine-grained skill that fits under a more generic skill defined as "resource management", illustrating concepts across the rich variety of available resource managers.
 
-Most institutions operating HPC systems offer regular training events focusing on general aspects of their supercomputer's hardware architecture, software stack, application development environment  and various tuning and debugging tools.   
-It is understandable why the materials they are geared towards the special demands of the institutions they support and its specific HPC environment. 
-The problem is that teaching content typically covers only a small part of basic HPC skills necessary to use other HPC systems. 
-This approach of teaching only specific implementations, tools or workflows, instead of concepts behind them makes a move to a different system or tool unnecessary complicated. 
-Narrowing the scope of training events make sense from the HPC provider perspective, but is not very conducive to development of more comprehensive learning environment that provides assessment and certifies the newly acquired skills. So although, certificates are used widely in IT industry to verify certain knowledge, until now there was no similar approach for HPC training. 
-It is, however, clear that a certification scheme could address some of the challenges stemming from the constantly growing training needs of our community,  
+Most institutions operating HPC systems offer regular training events focusing on general aspects of their supercomputer's hardware architecture, software stack, application development environment  and various tuning and debugging tools.
+It is understandable why the materials they are geared towards the special demands of the institutions they support and its specific HPC environment.
+The problem is that teaching content typically covers only a small part of basic HPC skills necessary to use other HPC systems.
+This approach of teaching only specific implementations, tools or workflows, instead of concepts behind them makes a move to a different system or tool unnecessary complicated.
+Narrowing the scope of training events make sense from the HPC provider perspective, but is not very conducive to development of more comprehensive learning environment that provides assessment and certifies the newly acquired skills. So although, certificates are used widely in IT industry to verify certain knowledge, until now there was no similar approach for HPC training.
+It is, however, clear that a certification scheme could address some of the challenges stemming from the constantly growing training needs of our community,
 
 This article describes the current status of the certification program initiated by the HPC Certification Forum.
 Our previous work provided a brief overview of the evolution from the project that sparked the HPC Certification Forum \cite{TAHCPKHHSS19} while this article provides details on adopted mechanisms and design decisions.
 
 The article is structured as follows:
-First, in \Cref{sec:forum} we introduce the HPC Certification Forum and the certification program. 
+First, in \Cref{sec:forum} we introduce the HPC Certification Forum and the certification program.
 Then, an overview of the status is given in \Cref{sec:status}, followed by the organisation of competencies discussed in \Cref{sec:skills}.
 This leads to the proposal for the certification process in \Cref{sec:certification}.
 In \Cref{sec:ecosystem} the whole learning ecosystem is described.
@@ -143,18 +143,18 @@ Finally, the article is concluded in \Cref{sec:conclusion}.
 \label{sec:forum}
 
 The HPC Certification Forum (HPCCF) has the role of a (virtual) central authority to curate and maintain the proposed certification program.
-The program consists of three parts: the tree of defined competencies, the examination of practitioners to prove they posses those skills, and finally the certification demonstrating their knowledge.     
+The program consists of three parts: the tree of defined competencies, the examination of practitioners to prove they posses those skills, and finally the certification demonstrating their knowledge.
 Although, the forum is not involved in development of any training materials or tools, it supports the ecosystem around the competencies.
 
 The HPCCF aims to support existing activities and complements them by providing a unified and clear way of mapping out the relevant HPC competencies.
 Thus, the HPCCF does not regulate the content of training material; we purposely separate the definition of skills, the examination and the certification from content delivery.
-Similarly, the program does not prescribe a curriculum or any fixed order by which skills need to be obtained. It eases the navigation between different competencies without being overly restrictive. 
+Similarly, the program does not prescribe a curriculum or any fixed order by which skills need to be obtained. It eases the navigation between different competencies without being overly restrictive.
 
 The forum is organised around a Webpage\footnote{http://hpc-certification.org},  a GitHub repository\footnote{https://github.com/HPC-certification-forum},  and a could-based team collaboration tool (Slack) for communication and monthly meetings.
-The membership is divined into three categories: associate, full and steering board.   
+The membership is divined into three categories: associate, full and steering board.
 Anyone can become an associate member free of charge, allowing a passive involvement -- e.g., observing the status, being listed on the webpage.
 Full members must actively contribute to the program and have voting rights for the roles of the steering board.
-The steering board directs the overall activities and is organised in different responsibilities, i.e., into topic-specific chairs. At the moment the steering board has 9 members. 
+The steering board directs the overall activities and is organised in different responsibilities, i.e., into topic-specific chairs. At the moment the steering board has 9 members.
 
 
 \section{Overview of the Activities}
@@ -248,7 +248,7 @@ While that Hussey et al. conclude that LOs on the coarse grained level are not u
 \subsection{Skill Examples}
 
 Next, we present a generic skill that describes an inner-node in more details.
-\ag{change sentence because delivery and deliver in one sentence - 
+\ag{change sentence because delivery and deliver in one sentence -
 There is no actual delivery as a module or teaching event to deliver the content, it serves the purpose to inform the practitioner about the importance of the skill.
 }
 \begin{itemize}
@@ -269,7 +269,7 @@ There is no actual delivery as a module or teaching event to deliver the content
     \end{itemize}
 \end{itemize}
 
-\ag{When I was reading the "learning outcome" of USE4.2B, another category came to mind: 
+\ag{When I was reading the "learning outcome" of USE4.2B, another category came to mind:
 How to write job scripts? How to batch use?
 So why not create a case where the learning outcomes overlap?
 Since you did the skill examples with USE4.2 in 4.2, I would not do "Figure 1" with extension of PE4 but USE4.
