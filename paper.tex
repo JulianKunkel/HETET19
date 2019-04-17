@@ -240,23 +240,22 @@ Although, Hussey et al. conclude that LOs on the coarse grained level are not us
 
 \subsection{Skill Examples}
 
-Next, we present a generic competence that describes an inner-node of the skill tree in more details.
+This subsection presents an example of an inner-node skill called "Executing parallel applications", as well as its two leaf skills - "Workload manager introduction" and "Slurm workload manager".
 
 \begin{itemize}
   \item \textbf{ID}: USE4.2-B
   \item \textbf{Name}: Executing parallel applications
   \item \textbf{Background}:
-  Parallel computers are operated differently than a normal PC, all users must share the system. Therefore, various operative procedures are in place. Users must understand these concepts and procedures to be able to use the available resources of a system to run a parallel application. Moreover, individual solutions can often be found in a specific system.
-  \item \textbf{Aim}: To enable practitioners to comprehend the concepts and procedures for running parallel applications in HPC environments.
-  To use the system to run and monitor the execution of parallel applications on the HPC system.
+  Parallel computers are operated differently than a normal PC -- all users share the system. To ensure a fair and efficient use of shared resources, various operative procedures are put in place. Users must understand these concepts and procedures to be able to run a parallel application on the resources available to them. Moreover, different HPC systems adopt different solution to manage their resources.  
+  \item \textbf{Aim}: To enable practitioners to comprehend the concepts and procedures for running parallel applications in HPC environments; to run and monitor the execution of parallel applications on HPC systems.
 
   \item \textbf{Learning outcomes}:
     \begin{itemize}
-    \item explain the concepts and procedures for resource allocation and job execution in an HPC environment
-    \item run interactive jobs and batch jobs
-    \item comprehend and describe the expected behavior of job scripts
-    \item change provided job scripts and embed them into shell scripts to run a variety of parallel applications
-    \item analyze the output generated from a job scheduler and describe the cause of typically generated errors
+    \item explain the concepts and procedures related to resource allocation and job execution in an HPC environment;
+    \item run interactive jobs and batch jobs;
+    \item understand and describe the content and expected behaviour of job scripts;
+    \item change provided job scripts and embed them into shell scripts to run a variety of parallel applications;
+    \item analyse the output generated from a job scheduler and understand the cause of typically generated errors.
     \end{itemize}
 \end{itemize}
 
@@ -267,24 +266,23 @@ Since you did the skill examples with USE4.2 in 4.2, I would not do "Figure 1" w
 Then you can always look there.
 }
 
-The next leaf-level skill describes how workload management works in general in HPC regardless of the specific software that implements such concepts.
-It is intended that the aim and outcomes from the parent skill above are covered to some extend and refined into specifics.
-
+The next leaf-level skill describes how workload management works in general, regardless of the specific software implementing it. 
+The aim and outcomes defined by the parent skill (described above) are expected to be covered (to a certain extend) and refined by this leaf skill.
 
 \begin{itemize}
   \item \textbf{ID}: USE4.2.1-B
   \item \textbf{Name}: Workload manager introduction
-  \item \textbf{Background}: There is a wide range of different workload managers in use. This skill covers generic and widely used concepts.
-  \item \textbf{Aim}: To enable practitioners to comprehend and describe the basic architecture and concepts of resource allocation for an HPC system.
+  \item \textbf{Background}: There is a wide range of different workload managers in use. This skill on a conceptual level explains how to use them.
+  \item \textbf{Aim}: To enable practitioners to comprehend and describe the basic architecture and concepts of resource allocation on an HPC system.
   \item \textbf{Learning outcomes}:
 
   \begin{itemize}
-  \item comprehend the exclusive and shared usage model in HPC
-  \item differentiate batch and interactive job submission
-  \item comprehend the generic concepts and architecture of resource manager, scheduler, job and job script
-  \item explain the role of environment variables as a means to communicate
-  \item comprehend accounting principles
-  \item explain the generic steps to run and monitor a single job
+  \item comprehend the exclusive and shared usage model in HPC;
+  \item differentiate between the batch and interactive job submission;
+  \item comprehend the generic concepts and structure of resource manager, scheduler, job and job script;
+  \item explain the role of environment variables as a mean to communicate certain settings of your job;  
+  \item comprehend job budgeting and accounting principles;
+  \item explain the generic steps required run and monitor a single job.
   \end{itemize}
 \end{itemize}
 
@@ -295,23 +293,23 @@ While there is no formal dependency to the introduction (skill USE4.2.2-B), it i
 \begin{itemize}
   \item \textbf{ID}: USE4.2.2-B
   \item \textbf{Name}: Slurm Workload manager
-  \item \textbf{Background}: Slurm is a widely used open-source workload manager providing various advanced features. % \kh{Vorschlag: einige der Highlights anführen: "... , like ..."}. Good idea, but later!
+  \item \textbf{Background}: Slurm is a widely used open-source workload manager, which also provides various advanced features. % \kh{Vorschlag: einige der Highlights anführen: "... , like ..."}. Good idea, but later!
   \item \textbf{Aims}:
   \begin{itemize}
     \item To enable practitioners to use relevant tools to run and monitor parallel applications using Slurm.
-    \item To enable practitioners to comprehend and describe the basic architecture of Slurm and the suite of tools.
+    \item To enable practitioners to comprehend and describe the basic structure of Slurm and the related suite of tools.
   \end{itemize}
   \item \textbf{Learning outcomes}:
   \begin{itemize}
-  \item run interactive jobs with salloc, a batch job with sbatch
-  \item explain the architecture of Slurm, i.e., the role of Slurmd, srun and the injection of environment variables
-  \item explain the function of the tools: sacct, sbatch, salloc, srun, scancel, squeue, sinfo
-  \item explain time limits and the benefit of a backfill scheduler
-  \item comprehend that environment variables are set when running a job
-  \item comprehend and describe the expected behavior of a simple job script
-  \item comprehend how variables are prioritized when using command line and a script
-  \item change a provided job template and embed them into shell scripts to run a variety of parallel applications
-  \item analyze the output generated from submitting to the job scheduler and typically generated errors
+  \item run interactive jobs with \textit{salloc}, a batch job with \textit{sbatch};
+  \item explain the architecture of Slurm, i.e., the role of \textit{Slurmd}, \textit{srun} and the injection of environment variables;
+  \item explain the function of the tools: \textit{sacct}, \textit{sbatch}, \textit{salloc}, \textit{srun}, \textit{scancel}, \textit{squeue} and \textit{sinfo};
+  \item explain time limits and the benefit of a backfill scheduler;
+  \item comprehend that environment variables are set when running a job;
+  \item comprehend and describe the expected behaviour of a simple job script;
+  \item comprehend how variables are prioritised when using command line and a script;
+  \item change a provided job template and embed them into shell scripts to run a variety of parallel applications;
+  \item analyse the output generated from submitting to the job scheduler and typically generated errors.
   \end{itemize}
 \end{itemize}
 
@@ -323,8 +321,8 @@ Create recursive and automatically a Binary Tree with Tikz and Tikz-qtree.
 If we can do it generically then I will be one step ahead with my skill tree for the slide set.
 }
 
-As you can see from the definition of the skill, these learning outcomes are focusing on the core needs to actually use Slurm effectively.
-An intermediate skill could, e.g., add reservations.
+The learning outcomes of this skill, marked with B to indicate its basic level, are focusing on the most fundamental knowledge required to use Slurm effectively.
+An intermediate version of the skill could, for example, cover how to create reservations or special queues.  
 
 %\begin{itemize}
 %  \item \textbf{ID}:
