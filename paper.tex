@@ -166,11 +166,11 @@ The first year of the HPCCF forum was rich in discussions, both internally and w
 The first steering board has been elected at ISC-HPC 2018.
 We established communication channels via webpage, email and Slack for regular discussion.
 Slack is also used to conduct our monthly open meetings between members and the steering board.
-At beginning video conferencing tools have been used, but the geographical diversity of the attendees influenced the decision to move towards chat-based tools. 
-The asynchronous nature and automatic message retention proved to be more productive, and provided a more open and inclusive platform for discussion.    
-Meeting notes with action items are extracted from Slack and documented using Google Doc (an online word processor allowing a real-time and multiple-user collaboration).  
+At beginning video conferencing tools have been used, but the geographical diversity of the attendees influenced the decision to move towards chat-based tools.
+The asynchronous nature and automatic message retention proved to be more productive, and provided a more open and inclusive platform for discussion.
+Meeting notes with action items are extracted from Slack and documented using Google Doc (an online word processor allowing a real-time and multiple-user collaboration).
 
-The ongoing conversation with various stakeholders involved in HPC education and training, keeps producing more engagement in the forum's activities.   
+The ongoing conversation with various stakeholders involved in HPC education and training, keeps producing more engagement in the forum's activities.
 The member's contributions are voluntarily and follow the schedule agreed between the contributor and the HPCCF board.
 The prospective contributions are managed in Trello (a web-based list-making collaborative application), in which each member can manage their own card.
 
@@ -180,8 +180,8 @@ The tasks we set out to accomplish are:  1) the definition of competencies; 2) t
 For all these sub-goals we made substantial progress.
 While the definition and organisation of competencies was the main focus, we prototyped various tools and processes that embed the competencies into the wider education ecosystem.
 
-Firstly, considering the pedagogic literature from higher education we finalised the templates for the skills description. 
-The effort to map out all of the relevant competencies is still on-going, but the feedback received during a number of events organised by the HPCCF and other members of the HPC education community resulted in the addition of new topics to the first version of the certification program. 
+Firstly, considering the pedagogic literature from higher education we finalised the templates for the skills description.
+The effort to map out all of the relevant competencies is still on-going, but the feedback received during a number of events organised by the HPCCF and other members of the HPC education community resulted in the addition of new topics to the first version of the certification program.
 
 The definitions of the competencies are version controlled with Git, and are publicly available in XML and Markdown format.
 A Wiki\footnote{https://www.hpc-certification.org/wiki/} is being used to edit the skills' descriptions, and a navigable and widely customisable JavaScript\footnote{https://www.hpc-certification.org/skills/map/} makes the skill tree easily accessible to the forum members and the end-users alike.
@@ -191,11 +191,11 @@ Preliminary processes and tools have been developed and deployed for curation of
 \section{Skills}
 \label{sec:skills}
 
-A skill is defined as a set of learning outcomes and relevant metadata. 
-Within a single skill, there can also be multiple levels (basic, intermediate and expert level) building upon each other and further distinguishing the expertise. 
+A skill is defined as a set of learning outcomes and relevant metadata.
+Within a single skill, there can also be multiple levels (basic, intermediate and expert level) building upon each other and further distinguishing the expertise.
 We expect the practitioners to acquire the lower levels before progressing to more complex levels.
 
-This model can be compared to the classification of school knowledge, for example, a skill with the name “basic arithmetic operations” would include the math skills of addition (being able to add numbers), subtraction (being able to subtract numbers), multiplication (being able to multiply numbers) and division (being able to divide numbers). Operating on two numbers would be a basic level of the skill, whereas mentally operating on hundreds of numbers would be an expert level. Another example could be a skill called "technical drawing", in which being able to draw simple geometric figures would be counted as a basic level, and an ability to draw a complicated mechanical objects would be an expert level. 
+This model can be compared to the classification of school knowledge, for example, a skill with the name “basic arithmetic operations” would include the math skills of addition (being able to add numbers), subtraction (being able to subtract numbers), multiplication (being able to multiply numbers) and division (being able to divide numbers). Operating on two numbers would be a basic level of the skill, whereas mentally operating on hundreds of numbers would be an expert level. Another example could be a skill called "technical drawing", in which being able to draw simple geometric figures would be counted as a basic level, and an ability to draw a complicated mechanical objects would be an expert level.
 
 The basic level should cover the most relevant aspect of the skill (needed by anyone that uses the skill), whereas the intermediate (used for common exceptional cases) and expert levels (used in special circumstances)  are needed only for a subset of users.
 Typically, an institution has only few experts, if any at all.
@@ -222,20 +222,20 @@ Each skill on the tree, including the inner nodes, is described in more detail a
 
 \begin{itemize}
   \item \textbf{ID}: ID according to its position in the skill tree. The last character indicates the level of the skill (Basic, Intermediate, or Advanced).
-  \item \textbf{Name}: A name capturing the essence of the skill.  
-  \item \textbf{Background}: Provides brief information motivating the need for the skill and how it fits into the bigger picture with other skills. 
-  \item \textbf{Aims}\footnote{The definition of aims and outcomes follows literature for higher education \cite{williamson2011good} and \url{https://www.heacademy.ac.uk/system/files/assessment-learning-outcomes.pdf}.}: 
-  Describe the purpose of the skills, but doesn't really include a list of what a practitioner will learn or do. Explaining what a skill is trying to achieve is not the same as saying how it should be done.  
+  \item \textbf{Name}: A name capturing the essence of the skill.
+  \item \textbf{Background}: Provides brief information motivating the need for the skill and how it fits into the bigger picture with other skills.
+  \item \textbf{Aims}\footnote{The definition of aims and outcomes follows literature for higher education \cite{williamson2011good} and \url{https://www.heacademy.ac.uk/system/files/assessment-learning-outcomes.pdf}.}:
+  Describe the purpose of the skills, but doesn't really include a list of what a practitioner will learn or do. Explaining what a skill is trying to achieve is not the same as saying how it should be done.
   \item \textbf{Learning outcomes (LOs)}: Defines briefly what practitioners will learn.
-  The objectives are statements what prospective learners are able to do. They should clearly describe or define an action bringing about a measurable/quantifiable increase in understanding of that skill.  
+  The objectives are statements what prospective learners are able to do. They should clearly describe or define an action bringing about a measurable/quantifiable increase in understanding of that skill.
  \end{itemize}
 
 On the leaf level, a skill is fine-grained and orthogonal to other skills -- their narrowed scope means they can be taught in sessions ranging from a 1.5 hour lecture up to a 4 hour workshop.
 We believe this granularity allows practitioners to cherry-pick the skills relevant to their circumstances, and lecturers and examiners to prepare small lectures with well-defined content.
 For technology-dependent skills on the leaf level (e.g., a specific file system or workload manager) the introductory skills are often provided, as they contribute to the foundation of many specialised skills representing a specific hardware or software technology.
 
-The aggregation within the tree is similar to that found in the education circles. Hussey et al.\cite{hussey2008learning} categorised the aggregation of skills into the following levels: individual teaching events, specified for modules or short courses, and those specified for whole degree programmes. 
-Although, Hussey et al. conclude that LOs on the coarse grained level are not useful for high-level education, using a similar concept with relaxed level of granularity/abstraction of the learning outcome fits well within the framework of the certification program.  
+The aggregation within the tree is similar to that found in the education circles. Hussey et al.\cite{hussey2008learning} categorised the aggregation of skills into the following levels: individual teaching events, specified for modules or short courses, and those specified for whole degree programmes.
+Although, Hussey et al. conclude that LOs on the coarse grained level are not useful for high-level education, using a similar concept with relaxed level of granularity/abstraction of the learning outcome fits well within the framework of the certification program.
 \kh{den Satz habe ich nicht genau verstanden; als Leser würde ich mir die Kurzbegründung wünschen, die Hussey et al. für ihre Feststellung anführen}
 
 \subsection{Skill Examples}
@@ -246,7 +246,7 @@ This subsection presents an example of an inner-node skill called "Executing par
   \item \textbf{ID}: USE4.2-B
   \item \textbf{Name}: Executing parallel applications
   \item \textbf{Background}:
-  Parallel computers are operated differently than a normal PC -- all users share the system. To ensure a fair and efficient use of shared resources, various operative procedures are put in place. Users must understand these concepts and procedures to be able to run a parallel application on the resources available to them. Moreover, different HPC systems adopt different solution to manage their resources.  
+  Parallel computers are operated differently than a normal PC -- all users share the system. To ensure a fair and efficient use of shared resources, various operative procedures are put in place. Users must understand these concepts and procedures to be able to run a parallel application on the resources available to them. Moreover, different HPC systems adopt different solution to manage their resources.
   \item \textbf{Aim}: To enable practitioners to comprehend the concepts and procedures for running parallel applications in HPC environments; to run and monitor the execution of parallel applications on HPC systems.
 
   \item \textbf{Learning outcomes}:
@@ -266,7 +266,7 @@ Since you did the skill examples with USE4.2 in 4.2, I would not do "Figure 1" w
 Then you can always look there.
 }
 
-The next leaf-level skill describes how workload management works in general, regardless of the specific software implementing it. 
+The next leaf-level skill describes how workload management works in general, regardless of the specific software implementing it.
 The aim and outcomes defined by the parent skill (described above) are expected to be covered (to a certain extend) and refined by this leaf skill.
 
 \begin{itemize}
@@ -280,7 +280,7 @@ The aim and outcomes defined by the parent skill (described above) are expected 
   \item comprehend the exclusive and shared usage model in HPC;
   \item differentiate between the batch and interactive job submission;
   \item comprehend the generic concepts and structure of resource manager, scheduler, job and job script;
-  \item explain the role of environment variables as a mean to communicate certain settings of your job;  
+  \item explain the role of environment variables as a mean to communicate certain settings of your job;
   \item comprehend job budgeting and accounting principles;
   \item explain the generic steps required run and monitor a single job.
   \end{itemize}
@@ -322,7 +322,7 @@ If we can do it generically then I will be one step ahead with my skill tree for
 }
 
 The learning outcomes of this skill, marked with B to indicate its basic level, are focusing on the most fundamental knowledge required to use Slurm effectively.
-An intermediate version of the skill could, for example, cover how to create reservations or special queues.  
+An intermediate version of the skill could, for example, cover how to create reservations or special queues.
 
 %\begin{itemize}
 %  \item \textbf{ID}:
@@ -337,12 +337,12 @@ An intermediate version of the skill could, for example, cover how to create res
 \label{sec:certification}
 
 A certificate shall serve as a confirmation that a user obtain the expertise in the relevant skills.
-Special considerations needs to be given to the certification integrity.  
+Special considerations needs to be given to the certification integrity.
 We must ensure that the learning outcomes of the covered skills are examined to a satisfactory degree, and prevent self-cheating or dishonesty.
-Students can always cheat during an examination -- the susceptibility to cheating depends on many factors, including but not limited to the type of exam, methods used for assessment, motivation for taking it,  consequences of failing or scoring poorly, and the possibility and frequency of resits. 
+Students can always cheat during an examination -- the susceptibility to cheating depends on many factors, including but not limited to the type of exam, methods used for assessment, motivation for taking it,  consequences of failing or scoring poorly, and the possibility and frequency of resits.
 
 We want to enable a cost-effective assessment (free for the practitioner), so we chose an online examination.
-This increases the opportunity for cheating \cite{rowe2004cheating} but we plan to deploy a several strategies to minimise the risk of cheating, such as raising the awareness of the examinees, using a pool of questions, time limits for each question and a delay between registering for and taking the examination. 
+This increases the opportunity for cheating \cite{rowe2004cheating} but we plan to deploy a several strategies to minimise the risk of cheating, such as raising the awareness of the examinees, using a pool of questions, time limits for each question and a delay between registering for and taking the examination.
 
 Since knowledge can age, each certificate needs to indicated when (month and year) the qualifying examination took place.
 Also, because the examination of a single fine-grained leaf-level skill would be too easy for short-term memorisation and more prone to self-cheating, the certificates bundle multiple skills together.
@@ -350,8 +350,8 @@ We believe the incentive to deliberately fake the assessment, e.g., by having th
 Therefore, we address this issue in a lightweight fashion only.
 
 A process has also been created for prospective contributors of the examination questions.
-The questions are the only proprietary component for the HPCCF -- using restrictive license terms for authors while giving them credit. 
-This is considered necessary to minimise the overhead of managing the database containing solutions to the examination questions. 
+The questions are the only proprietary component for the HPCCF -- using restrictive license terms for authors while giving them credit.
+This is considered necessary to minimise the overhead of managing the database containing solutions to the examination questions.
 
 In the next section, we discuss the process proposed for conducting the examination.
 
@@ -359,7 +359,7 @@ In the next section, we discuss the process proposed for conducting the examinat
 
 The examination process can be started at any time but a delay is employed before the examination actually starts.
 Firstly, a user has to register using their name, email address and optionally an affiliation.
-This process is explained, together with privacy policies, on the examination website. 
+This process is explained, together with privacy policies, on the examination website.
 Next, they need to read a paragraph on the integrity policy defining cheating and encouraging honesty.
 Practitioners are asked to opt-in for the policy statement.
 Upon receiving this registration, we generate an encrypted token on the server that is returned to the user by email.
@@ -367,7 +367,7 @@ At this stage, we do not store any information about the user on the server.
 
 The email contains a link that will start the examination, and the user chooses to start the examination by clicking on it. Only then, the information about the user and the examination start time is stored in a temporary database.
 
-The summative assessment itself is conducted using multiple choice questions. 
+The summative assessment itself is conducted using multiple choice questions.
 Therefore, for each skill, we will develop a pool of questions and answers, and accept external contributions.
 Each question has a pool of possible answers (e.g., 10). An examination consists of randomly selected questions with five of their answers, and the practitioner has to decide if each statement is true or false.
 
@@ -380,8 +380,8 @@ For example, if we identify that most users make the same mistake it may be an i
 If the user didn't meet the pass criteria, they will be informed about their score.
 The user can then retry to obtain the certificate after a cool-down period (typically one week), but not immediately afterwards to prevent success via brute force methods.
 To enforce this, the information about when the exam was undertaken is linked to the user's name and email.
-As the sole purpose of the multiple choice questions is the examination, the incorrectly answered questions will not revealed. 
-We assume that high quality training materials available within the HPC community, and covering the individual skills being part of this certification program, offer constructive feedback and other ways of consolidating the newly acquired knowledge. Therefore, the Forum's only concern is to provide the mechanism of certifying whether the learners posses that knowledge or not. As opposed to pointing out gaps in their understanding.   
+As the sole purpose of the multiple choice questions is the examination, the incorrectly answered questions will not revealed.
+We assume that high quality training materials available within the HPC community, and covering the individual skills being part of this certification program, offer constructive feedback and other ways of consolidating the newly acquired knowledge. Therefore, the Forum's only concern is to provide the mechanism of certifying whether the learners posses that knowledge or not. As opposed to pointing out gaps in their understanding.
 
  %---> ? \cite{epstein2002immediate}.
 
@@ -474,6 +474,17 @@ The EuroLab-4-HPC project establishes training in form of (online) courses\footn
 The Barcelona Supercomputing Centre (BSC) aims to develop a professional training curriculum \cite{sancho2016bsc}.
 The virtual organization XSEDE\footnote{\url{https://portal.xsede.org/web/xup/training/overview}} provides an online system to train the usage of an HPC system, structuring the corresponding information on their website into major topics like “Getting Started”.
 The user can navigate the topics and receive further information.
+
+The SciNet Certificate Program
+\footnote{\url{https://www.scinethpc.ca/scinet-certificate-program/}}
+ provides course material for three major Computer Science topics: Scientific Computing, High Performance Computing, and Data Science each with several subcategories.
+\footnote{\url{https://support.scinet.utoronto.ca/education/mods/certificate_programs_v2/index_public.php}}
+
+Companies like NVIDIA are offering courses in deep learning\footnote{\url{https://www.nvidia.com/de-de/deep-learning-ai/education/}}.
+Also Universities like Kennesaw State University providing Online Course for their students in the areas High Performance Computing and Big Data Analytics
+\footnote{\url{https://ccse.kennesaw.edu/cs/programs/cert-hpcc.php}}.
+\footnote{\url{https://www.ece.seas.gwu.edu/graduate-certificate-high-performance-computing}}
+
 
 \section{Conclusion}
 \label{sec:conclusion}
