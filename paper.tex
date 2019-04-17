@@ -342,7 +342,7 @@ We must ensure that the learning outcomes of the covered skills are examined to 
 Students can always cheat during an examination -- the susceptibility to cheating depends on many factors, including but not limited to the type of exam, methods used for assessment, motivation for taking it,  consequences of failing or scoring poorly, and the possibility and frequency of resits. 
 
 We want to enable a cost-effective assessment (free for the practitioner), so we chose an online examination.
-This increases the opportunity for cheating \cite{rowe2004cheating} but we plan to deploy a several strategies to minimise the risk of cheating, such as raising the awareness of the examinees, using a pool of questions, and setting time limits for each question. 
+This increases the opportunity for cheating \cite{rowe2004cheating} but we plan to deploy a several strategies to minimise the risk of cheating, such as raising the awareness of the examinees, using a pool of questions, time limits for each question and a delay between registering for and taking the examination. 
 
 Since knowledge can age, each certificate needs to indicated when (month and year) the qualifying examination took place.
 Also, because the examination of a single fine-grained leaf-level skill would be too easy for short-term memorisation and more prone to self-cheating, the certificates bundle multiple skills together.
@@ -357,34 +357,33 @@ In the next section, we discuss the process proposed for conducting the examinat
 
 \subsection{Examination Process}
 
-The examination can be started by users any time but upon submission a delay is employed.
-Firstly, a user has to register for the examination using name and email address and optional affiliation.
-On the webpage, the process is explained, together with privacy policies.
-Further, a paragraph provides the integrity policy defining cheating and encouraging honesty.
-Practitioners are asked to opt-in the policy statement.
-With the registration, we generate an encrypted token on the server that is returned to the user by email.
+The examination process can be started at any time but a delay is employed before the examination actually starts.
+Firstly, a user has to register using their name, email address and optionally an affiliation.
+This process is explained, together with privacy policies, on the examination website. 
+Next, they need to read a paragraph on the integrity policy defining cheating and encouraging honesty.
+Practitioners are asked to opt-in for the policy statement.
+Upon receiving this registration, we generate an encrypted token on the server that is returned to the user by email.
 At this stage, we do not store any information about the user on the server.
 
-The email contains a link that will start the examination.
-The user chooses to start the examination by clicking on the link; then the information about the user and the time of starting the examination is stored in a temporary database.
+The email contains a link that will start the examination, and the user chooses to start the examination by clicking on it. Only then, the information about the user and the examination start time is stored in a temporary database.
 
-The summative assessment itself is conducted using multiple choice questions.
-Therefore, for each skill, we will be developing a pool of questions but also allow contribution of questions.
-A question has more possible answers (e.g., 10) -- the practitioner has to select if each  statement is true or false.
-An examination consists of randomly selected questions and five answers per question are selected.
+The summative assessment itself is conducted using multiple choice questions. 
+Therefore, for each skill, we will develop a pool of questions and answers, and accept external contributions.
+Each question has a pool of possible answers (e.g., 10). An examination consists of randomly selected questions with five of their answers, and the practitioner has to decide if each statement is true or false.
 
-Once the user submits the exam results, all selected answers are stored on the server for validation -- which is done manually at the moment.
-If the user meets the criteria to pass (typically 70\% correct selection), a certificate is issued and send to the user by email.
-We then delete all personal information about the user from the server but preserve the affiliation and the raw responses.
-The affiliation is used for promotion purposes while the raw responses will be analyzed to optimize the questions.
-For example, when we identify that most users make a particular mistake, this may be an indication that the question or answer is ambivalent and needs to be improved.
+Once the user submits the completed exam, all selected answers are stored on the server for validation -- which currently is done manually.
+If the user meets the pass criteria (typically 70\% of correct answers) the earned certificate is issued and sent to the user by email.
+All personal information about the user is then deleted from the server, but the affiliation and raw responses are preserved.
+The affiliation is used for promotional purposes, while the raw responses will be analysed to optimise the questions.
+For example, if we identify that most users make the same mistake it may be an indication that either that question or its answer is too ambiguous and should be improved.
 
-If the user didn't meet the criteria to pass, we will inform him about the rough score obtained.
-The user can retry to obtain the certificate after a cooldown period (typically one week) but not immediately to prevent success via brute force methods.
-To enforce this, we keep the information about the date the exam was conducted linked to his name and email.
+If the user didn't meet the pass criteria, they will be informed about their score.
+The user can then retry to obtain the certificate after a cool-down period (typically one week), but not immediately afterwards to prevent success via brute force methods.
+To enforce this, the information about when the exam was undertaken is linked to the user's name and email.
+As the sole purpose of the multiple choice questions is the examination, the incorrectly answered questions will not revealed. 
+We assume that high quality training materials available within the HPC community, and covering the individual skills being part of this certification program, offer constructive feedback and other ways of consolidating the newly acquired knowledge. Therefore, the Forum's only concern is to provide the mechanism of certifying whether the learners posses that knowledge or not. As opposed to pointing out gaps in their understanding.   
 
-As the sole purpose of the multiple choice questions is the examination, we will not reveal which questions are answered correctly.
-We assume that high quality training material for individual skills will offer multiple choice questions that serve the purpose of feedback which promotes learning  \cite{epstein2002immediate}.
+ %---> ? \cite{epstein2002immediate}.
 
 \subsection{Certificates}
 
