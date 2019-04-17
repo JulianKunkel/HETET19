@@ -157,7 +157,7 @@ Full members must actively contribute to the program and have voting rights for 
 The steering board directs the overall activities and is organised in different responsibilities, i.e., into topic-specific chairs. At the moment the steering board has 9 members.
 
 
-\section{Overview of the Activities}
+\section{Overview of the HPCCF activities}
 \label{sec:status}
 
 The first year of the HPCCF forum was rich in discussions, both internally and with external partners, resulting in a number of processes and prototype tools being put in place. These are described briefly below, and in more details in the subsequent sections.
@@ -186,34 +186,33 @@ The effort to map out all of the relevant competencies is still on-going, but th
 The definitions of the competencies are version controlled with Git, and are publicly available in XML and Markdown format.
 A Wiki\footnote{https://www.hpc-certification.org/wiki/} is being used to edit the skills' descriptions, and a navigable and widely customisable JavaScript\footnote{https://www.hpc-certification.org/skills/map/} makes the skill tree easily accessible to the forum members and the end-users alike.
 
-Premilinary processes and tools have been developed and deployed for curation of the examination questions and for conducting an online multiple-choice examination.
+Preliminary processes and tools have been developed and deployed for curation of the examination questions and for conducting an online multiple-choice examination.
 
 \section{Skills}
 \label{sec:skills}
 
-A skill is defined as a set of competencies (learning outcomes) and some metadata.
-This model can be compared to the classification of school knowledge, for example, the skill with the short name “addition” could describe the math skill of being able to add numbers successfully.\kh{ich halte ein prägnantes und gutes Beispiel hier für wichtig. Ohne den Übergang zum Expert Level gefällt mir die "Addition" auch gut, aber der Übergang zu "Expert" mit dem Addieren mehrerer Zahlen ist zwar auf abstrakter Ebene ok, aber doch etwas weit entfernt von der Praxis; so spontan fällt mir als analoges alternatives Beispiel aus dem Bereich der Geometrie das Zeichnen einer Geraden mit dem Lineal ("Basic Level") oder die Konstruktion eines Sechsecks mit Zirkel und Lineal ("Expert Level") ein}.
-Within a single skill, there can also be multiple levels (basic, intermediate, expert level) building upon each other that distinguish the expertise further.
-We expect that practitioners acquire the lower levels before progressing to more complex levels.
-In our addition example, \textit{basic level}, for example, may mean to be able to add two positive numbers while the \textit{expert level} of that skill could indicate to be able to add multiple numbers.
+A skill is defined as a set of learning outcomes and relevant metadata. 
+Within a single skill, there can also be multiple levels (basic, intermediate and expert level) building upon each other and further distinguishing the expertise. 
+We expect the practitioners to acquire the lower levels before progressing to more complex levels.
 
-The basic level should cover the most relevant aspect of the skill, i.e., needed by anyone that uses the skill, the intermediate level (used for common exceptional cases) and expert levels (used in special circumstances)  are needed only for a subset of users.
-Typically, an institution has only few experts (if one at all).
+This model can be compared to the classification of school knowledge, for example, a skill with the name “basic arithmetic operations” would include the math skills of addition (being able to add numbers), subtraction (being able to subtract numbers), multiplication (being able to multiply numbers) and division (being able to divide numbers). Operating on two numbers would be a basic level of the skill, whereas mentally operating on hundreds of numbers would be an expert level. Another example could be a skill called "technical drawing", in which being able to draw simple geometric figures would be counted as a basic level, and an ability to draw a complicated mechanical objects would be an expert level. 
 
-The skills are organized in a tree that serves the purpose to organize and structure the skills from a coarse-grained to a fine-grained representation allowing users to browse the skill based on the semantics.
-The root level of our current skill tree is shown in \Cref{fig:skill-tree}; we aim to finalize the tree this year.
-The basic idea is that the skills from the root level enable navigation by providing an indication about their scope, e.g., are they core knowledge, dealing with the usage of HPC environments, or about programming.
+The basic level should cover the most relevant aspect of the skill (needed by anyone that uses the skill), whereas the intermediate (used for common exceptional cases) and expert levels (used in special circumstances)  are needed only for a subset of users.
+Typically, an institution has only few experts, if any at all.
+
+The skills are organised in a tree structure from a coarse-grained to a fine-grained representation, allowing users to browse the skill based on the semantics.
+The root level of our current skill tree is shown in \Cref{fig:skill-tree}. The goal is to finalise the tree this year.
+The basic idea is that the skills from the root level simplify the navigation by providing an indication about their scope, e.g., core knowledge, usage of HPC environments, or about programming.
 This should allow the user to rapidly drill into the skill representation.
-The closer a skill is to the root, the more abstract it is defined, while leaf nodes cover the knowledge for the specific skill.
+The closer a skill is to the root, the more abstractly it is defined, while leaf nodes cover the knowledge for a specific skill.
 
-
-As the tree serves the purpose to organize the skills, there can also be references from one branch to a skill in another.
-This import allows to reuse the definitions of the skills while still allowing users to navigate the tree according to the semantics.
+As the tree serves the purpose of organising the skills, the references from one branch to a skill in another branch are allowed.
+This import feature makes the reuse of the skill definitions possible, at the same time allowing users to navigate the tree according to the semantics.
 
 \begin{figure*}[tb!]
 	\centering
 	\includegraphics[width=15.0cm]{skill-tree}
-	\caption{Skill tree top level competencies with an expansion of PE4}
+	\caption{Skill tree: top level competencies with the PE4 branch expanded.}
 	\label{fig:skill-tree}
 \end{figure*}
 
@@ -222,7 +221,7 @@ This import allows to reuse the definitions of the skills while still allowing u
 Each skill on the tree and even the inner nodes are described in more detail as follows:
 
 \begin{itemize}
-  \item \textbf{ID}: ID according the organization in the skill tree. The last character indicates the level of the skill (Basic, Intermediate, or Advanced).
+  \item \textbf{ID}: ID according the organisation in the skill tree. The last character indicates the level of the skill (Basic, Intermediate, or Advanced).
   \item \textbf{Name}: A speaking name for the skill.
   \item \textbf{Background}: Provides brief information motivating the need for the skill and how this skill fits into the skill tree; what is the bigger picture.
   \item \textbf{Aims}\footnote{The definition of aims and outcomes follows literature for higher education \cite{williamson2011good} and \url{https://www.heacademy.ac.uk/system/files/assessment-learning-outcomes.pdf}.}: They serve as broad purposes and are generally a statement of the intentions of the skill.
