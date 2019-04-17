@@ -387,14 +387,14 @@ We assume that high quality training materials available within the HPC communit
 
 \subsection{Certificates}
 
-Upon successful assessment, a certificate is awarded, it consists of two parts:
-A PDF with the key information needed for a meaningful certificate (for a draft, see \Cref{fig:awardedCertificate}).
-The name and identifier for the certificate is found in the center and below (here 1 and “HPC Driving License”).
-Similar to a driving license, this particular certificate could provide the minimum set of knowledge to understand and use a generic supercomputer.
+The examinees that pass the examination are awarded a corresponding certificate. Such certificate consists of two parts: a PDF and a text file. 
+The PDF contains the key information making the certificate meaningful. An example of how it may look like is presented in\Cref{fig:awardedCertificate}.
+The name and identifier of the certificate is found in the centre, on our example these are "HPC Driving License" and 1, respectively.  
+Similar to a driving license, this particular certificate could provide the minimum set of knowledge required to understand and use a typical supercomputer.
 
-Secondly, a text file is given to the user that provides the same information.
-It is PGP signed using the private key of the HPC Certification Forum to allow verification with the  public key.
-It also contains a verification URL that can be given to a third-party allowing verification of the information.
+The text file a contains the same information, as well as a verification URL that can be given to a third-party to confirm the certificate's credibility. 
+It is also PGP signed using the private key of the HPC Certification Forum to allow verification with the public key.
+
 
 The file looks as follows:
 \begin{verbatim}
@@ -409,6 +409,8 @@ Verification URL: https://hpc-certification.org/[...]
 [...]
 -----END PGP SIGNATURE-----
 \end{verbatim}
+
+Together both documents should be able to provide enough credibility for the certification to be fully functional within the HPC academic and professional domains. Further improvements will be adopted as required. 
 
 \begin{figure}
   \includegraphics[width=0.48\textwidth]{JulianMKunkel}
