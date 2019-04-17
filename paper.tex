@@ -17,8 +17,8 @@
 \graphicspath{{./fig/}}
 \DeclareGraphicsExtensions{.png,.pdf,.jpg,.jpeg}
 
-\newcommand{\jk}[1]{\todo[inline]{TODO: #1}}
-\newcommand{\ag}[1]{\todo[inline]{IDEA: #1}}
+\newcommand{\jk}[1]{\todo[inline]{JK: #1}}
+\newcommand{\ag}[1]{\todo[inline]{Anja: #1}}
 \newcommand{\kh}[1]{\todo[inline]{KH: #1}}
 
 \begin{document}
@@ -174,7 +174,7 @@ Meeting notes with action items are extracted from Slack and documented using Go
 Note that until now contributions of members are voluntarily and follow the schedule as agreed between the contributor and the HPCCF board.
 We manage the prospect contributions in a Trello board\kh{Vorschlag: kurze Info zum Tool bzw. Link (wie bei Slack und Google Doc) ergänzen (Trello kennt ja nicht unbedingt jeder Leser); der Begriff "collaborative" sollte irgendwo untergebracht werden}; each member can manage its own card.
 
-\paragraph{Technical}\kh{"Management" (oberhalb) finde ich auf der Ebene alleinstehend gut, "Technical" etwas zu kurz, Vorschlag: "Technical Tasks" (o.ä.)}
+\paragraph{Technical tasks}
 According to our goals, we address 1) the definition of competencies; 2) the creation of certificates; 3) the examination of practitioners; and 4) an ecosystem of tools supporting them.
 
 For all these sub-goals we made substantial progress.
@@ -247,10 +247,8 @@ While that Hussey et al. conclude that LOs on the coarse grained level are not u
 
 \subsection{Skill Examples}
 
-Next, we present a generic skill that describes an inner-node in more details.
-\ag{change sentence because delivery and deliver in one sentence -
-There is no actual delivery as a module or teaching event to deliver the content, it serves the purpose to inform the practitioner about the importance of the skill.
-}
+Next, we present a generic competence that describes an inner-node of the skill tree in more details.
+
 \begin{itemize}
   \item \textbf{ID}: USE4.2-B
   \item \textbf{Name}: Executing parallel applications
@@ -298,13 +296,13 @@ It is intended that the aim and outcomes from the parent skill above are covered
 \end{itemize}
 
 
-The following skill describes a leaf-level skill for the usage of Slurm in\kh{at} the basic level.
+The following skill describes a leaf-level skill for the usage of Slurm at the basic level.
 While there is no formal dependency to the introduction (skill USE4.2.2-B), it is expected that practitioners have obtained the other skill before learning this one.
 
 \begin{itemize}
   \item \textbf{ID}: USE4.2.2-B
   \item \textbf{Name}: Slurm Workload manager
-  \item \textbf{Background}: Slurm is a widely used open-source workload manager providing various advanced features\kh{Vorschlag: einige der Highlights anführen: "... , like ..."}.
+  \item \textbf{Background}: Slurm is a widely used open-source workload manager providing various advanced features. % \kh{Vorschlag: einige der Highlights anführen: "... , like ..."}. Good idea, but later!
   \item \textbf{Aims}:
   \begin{itemize}
     \item To enable practitioners to use relevant tools to run and monitor parallel applications using Slurm.
@@ -313,11 +311,11 @@ While there is no formal dependency to the introduction (skill USE4.2.2-B), it i
   \item \textbf{Learning outcomes}:
   \begin{itemize}
   \item run interactive jobs with salloc, a batch job with sbatch
-  \item explain the architecture of Slurm, i.e., the role of Slurmd\kh{Slurmd haben wir beim "Basic Level" bisher nicht vorgesehen}, srun and the injection of environment variables
+  \item explain the architecture of Slurm, i.e., the role of Slurmd, srun and the injection of environment variables
   \item explain the function of the tools: sacct, sbatch, salloc, srun, scancel, squeue, sinfo
   \item explain time limits and the benefit of a backfill scheduler
   \item comprehend that environment variables are set when running a job
-  \item comprehend and describe the expected behavior of a simple job scripts\kh{typo?}
+  \item comprehend and describe the expected behavior of a simple job script
   \item comprehend how variables are prioritized when using command line and a script
   \item change a provided job template and embed them into shell scripts to run a variety of parallel applications
   \item analyze the output generated from submitting to the job scheduler and typically generated errors
@@ -440,7 +438,7 @@ Firstly, an author of training material is allowed to indicate on the training m
 which skills are covered by the material completely or partially.
 We provide a seal that can be used for that purpose (see \Cref{fig:seal-teaching}).
 The reference to the HPCCF and the seal can be used free of charge under the condition that the developer of the training material
-registers a link to the material or course and their\kh{Plural hier beabsichtigt (Bezug?)} email address on our webpage using an online form.
+registers a link to the material or course on our webpage using an online form. %\footnote{Details of the link will show the email address.}
 That way, the HPCCF is informed about the usage of the seal.
 
 Secondly, we will link on our webpage the endorsed training material for the individual skills and certificates.
