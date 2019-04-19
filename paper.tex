@@ -36,7 +36,6 @@
 
 
 \author{Kai Himstedt}
-\author{Nathanael Hübbe}
 \affiliation{%
   \institution{Universität Hamburg}
   \streetaddress{}
@@ -94,7 +93,7 @@ The ever-changing nature of HPC has always compelled the HPC community to focus 
  learning a particular set of skills? How can we satisfy their training needs if we don't really understand what these are? It's clear that HPC centres struggle to identify and overcome the
  gaps in users' knowledge, while users struggle to identify skills required to perform their tasks.
 
-With the HPC Certification Forum we aim to clearly categorise, define, and examine competencies expected from proficient HPC practitioners.
+With the HPC Certification Forum, we aim to clearly categorise, define, and examine competencies expected from proficient HPC practitioners.
 In this article, we report the status and progress this independent body has made during the first year of its existence. The drafted processes and prototypes are expected to mature into a
 holistic ecosystem beneficial for all stakeholders in HPC education.
 \end{abstract}
@@ -121,14 +120,15 @@ For example, a scientist needing to run an application on a specific machine may
 Now rather than providing that scientists with a list of instructions to be followed in a copy and paste fashion or a never-ending list of things they should know, we want them to understand each of the required steps without having to learner everything about it, but at the same time understand how it fits into the bigger picture of using an HPC system.
 For instance, understanding Slurm is a good example of a very fine-grained skill that fits under a more generic skill defined as "resource management", illustrating concepts across the rich variety of available resource managers.
 
-Most institutions operating HPC systems offer regular training events focusing on general aspects of their supercomputer's hardware architecture, software stack, application development environment  and various tuning and debugging tools.
-It is understandable why the materials they are geared towards the special demands of the institutions they support and its specific HPC environment.
-The problem is that teaching content typically covers only a small part of basic HPC skills necessary to use other HPC systems.
-This approach of teaching only specific implementations, tools or workflows, instead of concepts behind them makes a move to a different system or tool unnecessary complicated.
-Narrowing the scope of training events make sense from the HPC provider perspective, but is not very conducive to development of more comprehensive learning environment that provides assessment and certifies the newly acquired skills. So although, certificates are used widely in IT industry to verify certain knowledge, until now there was no similar approach for HPC training.
+Most data centers operating HPC systems offer regular training events focusing on general aspects of their supercomputer's hardware architecture, software stack, application development environment and various tuning and debugging tools.
+It is understandable why the materials they offer are geared towards the special demands of the specific HPC environment and the institutions they support.
+The problem is that teaching content typically covers only a fraction of the HPC skills necessary to use another HPC system.
+This approach of teaching only specific implementations, tools or workflows---instead of concepts behind them---makes a move to a different system or tool unnecessary complicated.
+Narrowing the scope of training events make sense from the HPC provider perspective, but is not very conducive to development of a more comprehensive learning environment that provides assessment and certifies the newly acquired skills.
+Although certificates are used widely in IT industry to verify certain knowledge, until now there was no similar approach for HPC training.
 It is, however, clear that a mapping of competences and certification scheme could address some of the challenges stemming from the constantly growing training needs of our community,
 
-This article describes the current status of the certification program initiated by the HPC Certification Forum.
+This article describes the current status of the certification program curated by the HPC Certification Forum.
 Our previous work provided a brief overview of the evolution from the project that sparked the HPC Certification Forum \cite{TAHCPKHHSS19} while this article provides details on adopted mechanisms and design decisions.
 
 The article is structured as follows:
@@ -150,25 +150,26 @@ The HPCCF aims to support existing activities and complements them by providing 
 Thus, the HPCCF does not regulate the content of training material; we purposely separate the definition of skills, the examination and the certification from content delivery.
 Similarly, the program does not prescribe a curriculum or any fixed order by which skills need to be obtained. It eases the navigation between different competencies without being overly restrictive.
 
-The forum is organised around a Webpage\footnote{http://hpc-certification.org},  a GitHub repository\footnote{https://github.com/HPC-certification-forum},  and a could-based team collaboration tool (Slack) for communication and monthly meetings.
-The membership is divined into three categories: associate, full and steering board.
+The forum is organised around a Webpage\footnote{http://hpc-certification.org},  a GitHub repository\footnote{https://github.com/HPC-certification-forum},  and a team collaboration tool (Slack) for communication and monthly meetings.
+The membership is divided into three categories: associate, full and steering board.
 Anyone can become an associate member free of charge, allowing a passive involvement -- e.g., observing the status, being listed on the webpage.
-Full members must actively contribute to the program and have voting rights for the roles of the steering board.
+Full members must actively contribute to the program and, in return, gain voting rights for the roles of the steering board.
 The steering board directs the overall activities and is organised in different responsibilities, i.e., into topic-specific chairs. At the moment the steering board has 9 members.
 
 
 \section{Overview of the HPCCF activities}
 \label{sec:status}
 
-The first year of the HPCCF forum was rich in discussions, both internally and with external partners, resulting in a number of processes and prototype tools being put in place. These are described briefly below, and in more details in the subsequent sections.
+The first year of the HPCCF forum was rich in discussions, both internally and with external partners, resulting in a number of processes and prototype tools being put in place.
+These are described briefly below, and in more details in the subsequent sections.
 
 \paragraph{Management}
 The first steering board has been elected at ISC-HPC 2018.
 We established communication channels via webpage, email and Slack for regular discussion.
 Slack is also used to conduct our monthly open meetings between members and the steering board.
-At beginning video conferencing tools have been used, but the geographical diversity of the attendees influenced the decision to move towards chat-based tools.
+At beginning, video conferencing tools have been used but the geographical diversity of the attendees influenced the decision to move towards chat-based tools.
 The asynchronous nature and automatic message retention proved to be more productive, and provided a more open and inclusive platform for discussion.
-Meeting notes with action items are extracted from Slack and documented using Google Doc (an online word processor allowing a real-time and multiple-user collaboration).
+Meeting notes with action items are extracted from Slack and documented using Google Doc (an online word processor allowing real-time and multiple-user collaboration).
 
 The ongoing conversation with various stakeholders involved in HPC education and training, keeps producing more engagement in the forum's activities.
 The member's contributions are voluntarily and follow the schedule agreed between the contributor and the HPCCF board.
@@ -195,13 +196,15 @@ A skill is defined as a set of learning outcomes and relevant metadata.
 Within a single skill, there can also be multiple levels (basic, intermediate and expert level) building upon each other and further distinguishing the expertise.
 We expect the practitioners to acquire the lower levels before progressing to more complex levels.
 
-This model can be compared to the classification of school knowledge, for example, a skill with the name “basic arithmetic operations” would include the math skills of addition (being able to add numbers), subtraction (being able to subtract numbers), multiplication (being able to multiply numbers) and division (being able to divide numbers). Operating on two numbers would be a basic level of the skill, whereas mentally operating on hundreds of numbers would be an expert level. Another example could be a skill called "technical drawing", in which being able to draw simple geometric figures would be counted as a basic level, and an ability to draw a complicated mechanical objects would be an expert level.
-
 The basic level should cover the most relevant aspect of the skill (needed by anyone that uses the skill), whereas the intermediate (used for common exceptional cases) and expert levels (used in special circumstances)  are needed only for a subset of users.
 Typically, an institution has only few experts, if any at all.
 
+This model can be compared to the classification of school knowledge, for example, a skill with the name “basic arithmetic operations” would include the math skills of addition (being able to add numbers) and subtraction (being able to subtract numbers), multiplication (being able to multiply numbers) and division (being able to divide numbers).
+Operating on two numbers with $\pm$ would be a basic level of the skill, whereas including multiplication/division and mentally operating on hundreds of numbers would be an expert level.
+Another example could be a skill called "technical drawing", in which being able to draw simple geometric figures would be counted as a basic level, and an ability to draw a complicated mechanical objects would be an expert level.
+
 The skills are organised in a tree structure from a coarse-grained to a fine-grained representation, allowing users to browse the skill based on the semantics.
-The root level of our current skill tree is shown in \Cref{fig:skill-tree}. The goal is to finalise the tree this year.
+The root level of our current\footnote{The goal is to finalise the tree this year.} skill tree is shown in \Cref{fig:skill-tree}.
 The basic idea is that the skills from the root level simplify the navigation by providing an indication about their scope, e.g., core knowledge, usage of HPC environments, or about programming.
 This should allow the user to rapidly drill into the skill representation.
 The closer a skill is to the root, the more abstractly it is defined, while leaf nodes cover the knowledge for a specific skill.
@@ -221,7 +224,8 @@ This import feature makes the reuse of the skill definitions possible, at the sa
 Each skill on the tree, including the inner nodes, is described in more detail as follows:
 
 \begin{itemize}
-  \item \textbf{ID}: ID according to its position in the skill tree. The last character indicates the level of the skill (Basic, Intermediate, or Advanced).
+  \item \textbf{ID}: Identifier according to its position in the skill tree.
+  The last character indicates the level of the skill (Basic, Intermediate, or Advanced).
   \item \textbf{Name}: A name capturing the essence of the skill.
   \item \textbf{Background}: Provides brief information motivating the need for the skill and how it fits into the bigger picture with other skills.
   \item \textbf{Aims}\footnote{The definition of aims and outcomes follows literature for higher education \cite{williamson2011good} and \url{https://www.heacademy.ac.uk/system/files/assessment-learning-outcomes.pdf}.}:
@@ -234,9 +238,10 @@ On the leaf level, a skill is fine-grained and orthogonal to other skills -- the
 We believe this granularity allows practitioners to cherry-pick the skills relevant to their circumstances, and lecturers and examiners to prepare small lectures with well-defined content.
 For technology-dependent skills on the leaf level (e.g., a specific file system or workload manager) the introductory skills are often provided, as they contribute to the foundation of many specialised skills representing a specific hardware or software technology.
 
-The aggregation within the tree is similar to that found in the education circles. Hussey et al.\cite{hussey2008learning} categorised the aggregation of skills into the following levels: individual teaching events, specified for modules or short courses, and those specified for whole degree programmes.
-Although, Hussey et al. conclude that LOs on the coarse grained level are not useful for high-level education, using a similar concept with relaxed level of granularity/abstraction of the learning outcome fits well within the framework of the certification program.
-%\kh{den Satz habe ich nicht genau verstanden; als Leser würde ich mir die Kurzbegründung wünschen, die Hussey et al. für ihre Feststellung anführen}
+The aggregation within the tree is similar to that found in the education circles.
+Hussey et al.\cite{hussey2008learning} categorised the aggregation of skills into the following levels: individual teaching events, specified for modules or short courses, and those specified for whole degree programmes.
+Hussey et al. conclude that LOs on the coarse grained level are not useful for high-level education because they “would state little more than an annotated list of contents” and relevant for those familiar with the subject.
+To overcome these issues, we provide a relaxed level of granularity and lower level of abstraction of the learning outcomes on inner nodes.
 
 \subsection{Skill Examples}
 
@@ -259,15 +264,8 @@ This subsection presents an example of an inner-node skill called "Executing par
     \end{itemize}
 \end{itemize}
 
-\ag{When I was reading the "learning outcome" of USE4.2B, another category came to mind:
-How to write job scripts? How to batch use?
-So why not create a case where the learning outcomes overlap?
-Since you did the skill examples with USE4.2 in 4.2, I would not do "Figure 1" with extension of PE4 but USE4.
-Then you can always look there.
-}
-
 The next leaf-level skill describes how workload management works in general, regardless of the specific software implementing it.
-The aim and outcomes defined by the parent skill (described above) are expected to be covered (to a certain extend) and refined by this leaf skill.
+The aim and outcomes defined by the parent skill (described above) are expected to be covered to a certain extend and refined by this leaf skill.
 
 \begin{itemize}
   \item \textbf{ID}: USE4.2.1-B
@@ -278,11 +276,11 @@ The aim and outcomes defined by the parent skill (described above) are expected 
 
   \begin{itemize}
   \item comprehend the exclusive and shared usage model in HPC;
+  \item explain the generic steps required to run and monitor a single job;
   \item differentiate between the batch and interactive job submission;
   \item comprehend the generic concepts and structure of resource manager, scheduler, job and job script;
   \item explain the role of environment variables as a mean to communicate certain settings of your job;
-  \item comprehend job budgeting and accounting principles;
-  \item explain the generic steps required run and monitor a single job.
+  \item comprehend job budgeting and accounting principles.
   \end{itemize}
 \end{itemize}
 
@@ -313,16 +311,14 @@ While there is no formal dependency to the introduction (skill USE4.2.2-B), it i
   \end{itemize}
 \end{itemize}
 
-\ag{I could put my slide set online and show the skill tree for the slide set. An example could be shown, there the content described in a skill tree are also explained in slide sets.
-Everything under USE 4.2.2 B, I have explained it in my slide set under "Slurm Usage on Goethe HLR cluster".
-\\
-What I have found and would like to try it out:  http://xlong88.github.io/draw-binary-tree-latex/
-Create recursive and automatically a Binary Tree with Tikz and Tikz-qtree.
-If we can do it generically then I will be one step ahead with my skill tree for the slide set.
-}
+%\ag{I could put my slide set online and show the skill tree for the slide set. An example could be shown, there the content described in a skill tree are also explained in slide sets.
+%Everything under USE 4.2.2 B, I have explained it in my slide set under "Slurm Usage on Goethe HLR cluster".
+%What I have found and would like to try it out:  http://xlong88.github.io/draw-binary-tree-latex/
+%Create recursive and automatically a Binary Tree with Tikz and Tikz-qtree.
+%If we can do it generically then I will be one step ahead with my skill tree for the slide set.
 
 The learning outcomes of this skill, marked with B to indicate its basic level, are focusing on the most fundamental knowledge required to use Slurm effectively.
-An intermediate version of the skill could, for example, cover how to create reservations or special queues.
+An intermediate version of the skill could, for example, could cover how to create reservations or special queues.
 
 %\begin{itemize}
 %  \item \textbf{ID}:
@@ -336,7 +332,7 @@ An intermediate version of the skill could, for example, cover how to create res
 \section{Certification}
 \label{sec:certification}
 
-A certificate shall serve as a confirmation that a user obtain the expertise in the relevant skills.
+A certificate shall serve as a confirmation that a user obtained the expertise in the relevant skills.
 Special considerations needs to be given to the certification integrity.
 We must ensure that the learning outcomes of the covered skills are examined to a satisfactory degree, and prevent self-cheating or dishonesty.
 Students can always cheat during an examination -- the susceptibility to cheating depends on many factors, including but not limited to the type of exam, methods used for assessment, motivation for taking it,  consequences of failing or scoring poorly, and the possibility and frequency of resits.
@@ -351,7 +347,7 @@ Therefore, we address this issue in a lightweight fashion only.
 
 A process has also been created for prospective contributors of the examination questions.
 The questions are the only proprietary component for the HPCCF -- using restrictive license terms for authors while giving them credit.
-This is considered necessary to minimise the overhead of managing the database containing solutions to the examination questions.
+This is considered necessary for managing the database containing solutions to the examination questions.
 
 In the next section, we discuss the process proposed for conducting the examination.
 
@@ -363,15 +359,18 @@ This process is explained, together with privacy policies, on the examination we
 Next, they need to read a paragraph on the integrity policy defining cheating and encouraging honesty.
 Practitioners are asked to opt-in for the policy statement.
 Upon receiving this registration, we generate an encrypted token on the server that is returned to the user by email.
-At this stage, we do not store any information about the user on the server.
+Up to this stage, we do not store any information about the user on the server.
 
-The email contains a link that will start the examination, and the user chooses to start the examination by clicking on it. Only then, the information about the user and the examination start time is stored in a temporary database.
+The email contains a link that will start the examination, and the user chooses to start the examination by clicking on it.
+Only then, the information about the user and the examination start time is stored in a temporary database.
 
 The summative assessment itself is conducted using multiple choice questions.
 Therefore, for each skill, we will develop a pool of questions and answers, and accept external contributions.
-Each question has a pool of possible answers (e.g., 10). An examination consists of randomly selected questions with five of their answers, and the practitioner has to decide if each statement is true or false.
+Each question has a pool of possible answers (e.g., 10).
+An examination consists of randomly selected questions with five of their answers, and the practitioner has to decide if each statement is true or false.
 
-Once the user submits the completed exam, all selected answers are stored on the server for validation -- which currently is done manually.
+Once the user submits the completed exam, the selection of answers is stored on the server for validation.
+At the moment, we envision the validation process includes a final manual step to trigger the certificate generation once provided with all information.
 If the user meets the pass criteria (typically 70\% of correct answers) the earned certificate is issued and sent to the user by email.
 All personal information about the user is then deleted from the server, but the affiliation and raw responses are preserved.
 The affiliation is used for promotional purposes, while the raw responses will be analysed to optimise the questions.
@@ -381,22 +380,21 @@ If the user didn't meet the pass criteria, they will be informed about their sco
 The user can then retry to obtain the certificate after a cool-down period (typically one week), but not immediately afterwards to prevent success via brute force methods.
 To enforce this, the information about when the exam was undertaken is linked to the user's name and email.
 As the sole purpose of the multiple choice questions is the examination, the incorrectly answered questions will not revealed.
-We assume that high quality training materials available within the HPC community, and covering the individual skills being part of this certification program, offer constructive feedback and other ways of consolidating the newly acquired knowledge. Therefore, the Forum's only concern is to provide the mechanism of certifying whether the learners posses that knowledge or not. As opposed to pointing out gaps in their understanding.
+We assume that high quality training materials available within the HPC community, and covering the individual skills being part of this certification program, offer constructive feedback and other ways of consolidating the newly acquired knowledge.
+Therefore, the Forum's only concern is to provide the mechanism of certifying whether the learners posses that knowledge or not;
+As opposed to pointing out gaps in their understanding.
 
  %---> ? \cite{epstein2002immediate}. Not sure this still fits here [WF]
 
 \subsection{Certificates}
 
-The examinees that pass the examination are awarded a corresponding certificate. Such certificate consists of two parts: a PDF and a text file. 
-The PDF contains the key information making the certificate meaningful. An example of how it may look like is presented in\Cref{fig:awardedCertificate}.
-The name and identifier of the certificate is found in the centre, on our example these are "HPC Driving License" and 1, respectively.  
+The examinees that pass the examination are awarded a corresponding certificate. Such certificate consists of two parts: a PDF and a text file.
+The PDF contains the key information making the certificate meaningful. An example of how it may look like is presented in \Cref{fig:awardedCertificate}.
+The name and identifier of the certificate is found in the centre, on our example these are "HPC Driving License" and ID 1, respectively.
 Similar to a driving license, this particular certificate could provide the minimum set of knowledge required to understand and use a typical supercomputer.
 
-The text file a contains the same information, as well as a verification URL that can be given to a third-party to confirm the certificate's credibility. 
-It is also PGP signed using the private key of the HPC Certification Forum to allow verification with the public key.
-
-
-The file looks as follows:
+The text file a contains the same information, as well as a verification URL that can be given to a third-party to confirm the certificate's credibility.
+It is also PGP signed using the private key of the HPC Certification Forum to allow verification with the public key. An example file looks as follows:
 \begin{verbatim}
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA512
@@ -410,7 +408,7 @@ Verification URL: https://hpc-certification.org/[...]
 -----END PGP SIGNATURE-----
 \end{verbatim}
 
-Together both documents should be able to provide enough credibility for the certification to be fully functional within the HPC academic and professional domains. Further improvements will be adopted as required. 
+Together both documents should be able to provide enough credibility for the certification to be fully functional within the HPC academic and professional domains. Further improvements will be adopted as required.
 
 \begin{figure}
   \includegraphics[width=0.48\textwidth]{JulianMKunkel}
@@ -421,7 +419,7 @@ Together both documents should be able to provide enough credibility for the cer
 \section{Ecosystem}
 \label{sec:ecosystem}
 
-The Forum encourages the development of an ecosystem around the HPC classification by supporting training and tool development. Many of its members are involved in those activities in a professional capacity, so the development of training materials and tools, and the development of the certification program have elements of co-design in them. 
+The Forum encourages the development of an ecosystem around the HPC classification by supporting training and tool development. Many of its members are involved in those activities in a professional capacity, so the development of training materials and tools, and the development of the certification program have elements of co-design in them.
 
 \subsection{Training Delivery}
 
@@ -430,17 +428,17 @@ However, we support individuals and institutions by endorsing and promoting thei
 
 Firstly, an author is allowed to indicate on the training material itself or a related promotional material which skills are covered either fully or partially.
 We provide a seal that can be used for that purpose (see \Cref{fig:seal-teaching}).
-The reference to the HPCCF and the seal can be used free of charge under the condition that the developer of the training material registers a link to the material or course on our webpage using an online form. %\footnote{Details of the link will show the email address.}
+The reference to the HPCCF and the seal can be used free of charge under the condition that the developer of the training material registers a link to the material (or course) on our webpage using an online form. %\footnote{Details of the link will show the email address.}
 That way, the HPCCF is informed about the usage of the seal.
 
 Secondly, we will link from our webpage the endorsed training material covering the individual skills and certificates.
-By using JavaScript and dynamic webpage we will provide various views of the skills -- with and without links to suitable training materials.
+By using JavaScript and dynamic webpages, we will provide various views of the skills -- with and without links to suitable training materials.
 
 Note that we are not intending to verify the correct usage of the seal explicitly.
 However, in case the training material or course doesn't deliver the expected material practitioners may complain and we will remove the link to that training material from our webpage.
 
 We expect that this strategy will make a good range of free training material available for most skills, while various institutions and individuals can still charge for effective training courses.
-Ultimately, the catalogued training materials will complement each other, leading to a rich variety of content suitable for each individual practitioner, e.g., addressing different learning styles and languages. This becomes increasingly important as more in-time personalised training in needed by our ever-growing HPC community. 
+Ultimately, the catalogued training materials will complement each other, leading to a rich variety of content suitable for each individual practitioner, e.g., addressing different learning styles and languages. This becomes increasingly important as more in-time personalised training in needed by our ever-growing HPC community.
 
 \begin{figure}
   \includegraphics[width=0.3\textwidth]{certified}
@@ -449,12 +447,13 @@ Ultimately, the catalogued training materials will complement each other, leadin
 \end{figure}
 
 
-\subsection{Navigation}\kh{Vorschlag Unterkapitel in "Results" umbenennen oder an anderer Stelle aus "Erwartungsgründen" ein "Results"-Kapitel ergänzen (am besten natürlich auf der Hauptgliederungsebene, aber das wird vermutlich schwierig werden)}
+\subsection{Navigation}
+
 %\paragraph{Navigation}
 Thanks to the contributions of the PeCoH project, a JavaScript prototype embeds a navigable skill tree into a webpage.
 The script can be used by different stakeholders to adjust and present the skill tree in the most suitable for them view.
 By view we mean the selection and organisation of the skills, and the additional information provided when looking at the tree.
-For instance, you could have a tree for a specific scientific domain, for a specific data centre, or even for the role of the tester of a specific application. 
+For instance, you could have a tree for a specific scientific domain, for a specific data centre, or even for the role of the tester of a specific application.
 This feature could be used to indicate which skills are mandatory or beneficial for these use cases, providing links to training material or adding further supplementary information.
 
 
@@ -464,48 +463,52 @@ This feature could be used to indicate which skills are mandatory or beneficial 
 
 Relevant work can be divided into two categories: efforts to establish an HPC curriculum, and systematic efforts to design, develop and deliver HPC teaching and training materials.
 
-In academia, many universities offer their own curriculum around scientific computing and HPC, as part of their undergraduate programmes, covering a range of theoretical and practical aspects relevant to the students field of study, e.g. software development of numerical domain-specific applications.
-Such courses rarely cover the efficient and effective use of HPC systems. 
-The number of taught modules focusing on HPC is small, and the number of the whole programmes dedicated to HPC is even smaller. We are aware such programmes are run by: EPCC at the University of Edinburgh \footnote{\url{https://www.epcc.ed.ac.uk/msc}}, the University of Liverpool\footnote{\url{https://www.liverpool.ac.uk/study/postgraduate-taught/taught/big-data-msc/overview/}}, the International School for Advanced Studies (SISSA) and ICTP in Italy\footnote{\url{https://www.mhpc.it/}}, the Trinity Collage Dublin\footnote{\url{https://www.maths.tcd.ie/hpcmsc/}} in Ireland, the Polytechnic University of Catalonia\footnote{\url{https://masters.fib.upc.edu/masters/miri-high-performance-computing}} and BSC in Spain and the University of Cote d'Azur\footnote{\url{http://univ-cotedazur.fr/education/training?AIHPC18&lang=en}} in France. These 1-2 year master programmes are fully accredited by the universities that run them, but that also makes them fairly expensive and their comprehensiveness is not suitable for the majority of HPC users. 
+In academia, many universities offer their own curriculum around scientific computing and HPC, as part of their undergraduate programmes, covering a range of theoretical and practical aspects relevant to the students field of study, e.g., software development of numerical domain-specific applications.
+Such courses rarely cover the efficient and effective use of HPC systems.
+The number of taught modules focusing on HPC is small, and the number of the whole programmes dedicated to HPC is even smaller.
+We are aware such programmes are run by: EPCC at the University of Edinburgh\footnote{\url{https://www.epcc.ed.ac.uk/msc}}, the University of Liverpool\footnote{\url{https://www.liverpool.ac.uk/study/postgraduate-taught/taught/big-data-msc/overview/}}, the International School for Advanced Studies (SISSA) and ICTP in Italy\footnote{\url{https://www.mhpc.it/}}, the Trinity Collage Dublin\footnote{\url{https://www.maths.tcd.ie/hpcmsc/}} in Ireland, the Polytechnic University of Catalonia\footnote{\url{https://masters.fib.upc.edu/masters/miri-high-performance-computing}} and BSC in Spain and the University of Cote d'Azur\footnote{\url{http://univ-cotedazur.fr/education/training?AIHPC18&lang=en}} in France. These 1-2 year master programmes are fully accredited by the universities that run them, but that also makes them fairly expensive and their comprehensiveness is not suitable for the majority of HPC users.
 
-Data centres offer their own teaching materials and run a number of training courses to support their own users. 
+\medskip
+
+Data centres offer their own teaching materials and run a number of training courses to support their own users.
 Although, these are becoming more varied in content and more accessible through the adoption of online, remote and asynchronous delivery methods, they are still not enough to fulfil the training needs of our community. Due to a variety of reasons some training opportunities are still only available at a specific time or place, or simply do not scale well enough to satisfy the demand.
 
-Several projects, organisations and initiatives continue to put their efforts into developing and sharing of teaching HPC resources. 
+\medskip
+
+Several projects, organisations and initiatives continue to put their efforts into developing and sharing of teaching HPC resources.
 The EuroLab-4-HPC project establishes training in form of online courses\footnote{\url{https://www.eurolab4hpc.eu/}}.
 The Barcelona Supercomputing Centre (BSC) aims to develop a professional training curriculum \cite{sancho2016bsc}.
-Both XSEDE\footnote{\url{https://portal.xsede.org/web/xup/training/overview}} (The Extreme Science and Engineering Discovery Environment) and PRACE\footnote{\url{http://www.training.prace-ri.eu/}} (Partnership for Advanced Computing in Europa), serving similar purpose in US and Europe, provide a variety of training opportunities and resources to make HPC more accessible to researchers across many scientific domains.  
+Both XSEDE\footnote{\url{https://portal.xsede.org/web/xup/training/overview}} (The Extreme Science and Engineering Discovery Environment) and PRACE\footnote{\url{http://www.training.prace-ri.eu/}} (Partnership for Advanced Computing in Europa), serving similar purpose in US and Europe, provide a variety of training opportunities and resources to make HPC more accessible to researchers across many scientific domains.
 The SciNet Certificate Program\footnote{\url{https://www.scinethpc.ca/scinet-certificate-program/}} provides course material for three major Computer Science topics: Scientific Computing, High Performance Computing, and Data Science each with several subcategories.
-Whereas the initiatives such as the HPC University\footnote{\url{http://hpcuniversity.org}}, the Carpentries (the HPC Carpentry especially)\footnote{\url{https://hpc-carpentry.github.io/}} and ACM SIGHPC Education Chapter\footnote{\url{https://sighpceducation.acm.org/}} strive to make sharing of teaching resources and practices simpler, and more accessible to trainers and practitioners alike. 
+Whereas the initiatives such as the HPC University\footnote{\url{http://hpcuniversity.org}}, the Carpentries (the HPC Carpentry especially)\footnote{\url{https://hpc-carpentry.github.io/}} and ACM SIGHPC Education Chapter\footnote{\url{https://sighpceducation.acm.org/}} strive to make sharing of teaching resources and practices simpler, and more accessible to trainers and practitioners alike.
 
 Finally, many companies offer training courses making their products and services easier to use by their end-users, e.g. NVIDIA offering courses in deep learning\footnote{\url{https://www.nvidia.com/de-de/deep-learning-ai/education/}} or Arm offering courses on various arm technologies\footnote{\url{https://www.arm.com/support/training}}.
 %Also Universities like Kennesaw State University providing Online Course for their students in the areas High Performance Computing and Big Data Analytics
 %\footnote{\url{https://ccse.kennesaw.edu/cs/programs/cert-hpcc.php}}.
-%\footnote{\url{https://www.ece.seas.gwu.edu/graduate-certificate-high-performance-computing}}  --> many universities do that, do we want to list all of them? 
+%\footnote{\url{https://www.ece.seas.gwu.edu/graduate-certificate-high-performance-computing}}  --> many universities do that, do we want to list all of them?
 
 \section{Conclusion}
 \label{sec:conclusion}
 
 The HPC Certification Program allows the re-use of existing content but also makes it possible to create a new ecosystem in which HPC centres, research labs, academic institutions and commercial companies could offer the best of their teaching material.
-The existing or newly created teaching resources should be marked accordingly to indicated which skills they covers.
+According to our proposal, the existing and newly created teaching resources should be marked accordingly to indicated which skills they cover.
 In the future, the program may provide means to register and reference existing content of third-parties allowing users to browse the skills and navigate to teaching material.
 
 \subsection{Benefits}
 
-The program brings multiple benefits to everyone involved in HPC teaching and training. It's obvious that making clear what skills are required or recommended for a competent HPC user would be helpful to both the HPC service providers and practitioners. Training providers could bundle together skills that are most beneficial for specific user roles and scientific domains, which would allow practitioners to browse through skills to quickly identify and learn the skills required to perform their tasks. The variety of training offered within our community makes finding the right resources more complicated than it should be -- the certification program will provide useful information where the desired skills could be learnt. The examination confirming that a certain set of competencies has been acquired makes the learning process more complete and meaningful.  
+The program brings multiple benefits to everyone involved in HPC teaching and training. It's obvious that making clear what skills are required or recommended for a competent HPC user would be helpful to both the HPC service providers and practitioners. Training providers could bundle together skills that are most beneficial for specific user roles and scientific domains, which would allow practitioners to browse through skills to quickly identify and learn the skills required to perform their tasks. The variety of training offered within our community makes finding the right resources more complicated than it should be -- the certification program will provide useful information where the desired skills could be learnt. The examination confirming that a certain set of competencies has been acquired makes the learning process more complete and meaningful.
 
-By participating in the program the HPC training providers can increase the visibility of their teaching opportunities and share their resources more effectively. 
-The mapping of the skills defined by the program onto the existing training materials should also help to identify any potential gaps and improve the integrity of offered training. 
+By participating in the program the HPC training providers can increase the visibility of their teaching opportunities and share their resources more effectively.
+The mapping of the skills defined by the program onto the existing training materials should also help to identify any potential gaps and improve the integrity of offered training.
 Finally, the certificates recognised by the whole HPC community simplify inter-comparison of independently offered courses and provide additional incentive for participation.
-Overall, the flexibility of the program allows to construct more personalised and just-in-time pathways to learning about HPC.  
+Overall, the flexibility of the program allows to construct more personalised and just-in-time pathways to learning about HPC.
 
 
 \appendix
 
 \begin{acks}
 \small
-We are thankful for the contributions and discussions with the members of the HPCCF and for the contributions made by the PeCoH project.
-\jk{TODO}
+We are thankful for the contributions and discussions with the members of the HPCCF and for the contributions made by the PeCoH project particularly Nathanael Hübbe for developing tools.
 PeCoH was supported by the German Research Foundation (DFG) under grants LU 1353/12-1, OL 241/2-1, and RI 1068/7-1.
 \end{acks}
 
